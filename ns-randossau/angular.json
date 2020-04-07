@@ -6,7 +6,7 @@
     "defaultCollection": "@nativescript/schematics"
   },
   "projects": {
-    "hello-world": {
+    "Rand'Ossau": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",

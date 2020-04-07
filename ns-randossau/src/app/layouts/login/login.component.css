@@ -1,0 +1,41 @@
+FlexboxLayout {
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-image: url("~/images/background.jpg");
+  }
+  StackLayout {
+    width: 300;
+    padding: 10 16;
+    background-color: white;
+    opacity: 0.8;
+  }
+
+  Image {
+    margin-bottom: 20;
+    height: 70;
+  }
+  Button, TextField {
+    margin-bottom: 10;
+  }
+  .btn-primary {
+    background-color: green;
+    margin-left: 0;
+    margin-right: 0;
+    color: white;
+
+  }
+
+.registration {
+    font-size: 10;
+    color:#C4AFB4;
+    font-style: italic;
+    background-color: white;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+}
+  TextField {
+    placeholder-color: #C4AFB4;
+    color: rgb(156, 145, 145);
+  }
