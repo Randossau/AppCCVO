@@ -8,7 +8,7 @@ import { RadSideDrawer } from "nativescript-ui-sidedrawer";
   selector: 'ns-accueil',
   templateUrl: './accueil.component.html',
   styleUrls: ['./accueil.component.css'],
-  moduleId: module.id,
+//   moduleId: module.id,
 })
 
 
