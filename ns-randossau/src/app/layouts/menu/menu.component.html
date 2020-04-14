@@ -1,1 +1,49 @@
-<Button text="menu works!" class="btn btn-primary"></Button>
+
+<BottomNavigation selectedIndex="1">
+
+    <!-- // content  button  -->
+
+    <TabStrip>
+
+        <TabStripItem>
+            <Label text="Accueil"></Label>
+        </TabStripItem>
+
+        <TabStripItem>
+            <Label text="GPS" class="far"></Label>
+        </TabStripItem>
+
+        <TabStripItem>
+            <Label text="Parcour"></Label>
+        </TabStripItem>
+
+        <TabStripItem>
+            <Label text="Incidents"></Label>
+        </TabStripItem>
+
+    </TabStrip>
+
+    <!-- // content when button pressed -->
+
+    <TabContentItem>
+        <GridLayout>
+            <ns-accueil></ns-accueil>
+        </GridLayout>
+    </TabContentItem>
+    <TabContentItem>
+        <GridLayout>
+            <ns-gps></ns-gps>
+        </GridLayout>
+    </TabContentItem>
+    <TabContentItem>
+        <GridLayout>
+            <ns-parcours></ns-parcours>
+        </GridLayout>
+    </TabContentItem>
+    <TabContentItem>
+        <GridLayout>
+            <ns-incidents></ns-incidents>
+        </GridLayout>
+    </TabContentItem>
+
+</BottomNavigation>
