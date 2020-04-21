@@ -6,12 +6,12 @@
     "defaultCollection": "@nativescript/schematics"
   },
   "projects": {
-    "Rand'Ossau": {
+    "rand-ossau": {
       "root": "",
-      "sourceRoot": "src",
+      "sourceRoot": ".",
       "projectType": "application",
-      "prefix": "ns"
+      "prefix": "app"
     }
   },
-  "defaultProject": "hello-world"
+  "defaultProject": "rand-ossau"
 }

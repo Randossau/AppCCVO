@@ -1,0 +1,26 @@
+ 
+@import '~@nativescript/theme/css/core.css';
+@import "~@nativescript/theme/css/default.css";
+
+.btn {
+    font-size: 18;
+}
+
+
+.skeleton-light {
+    background-color: #46556E;
+}
+
+.skeleton-dark {
+    background-color: #3c495e;
+}
+
+.skeleton-accent {
+    background-color: #5a467f;
+}
+
+/*
+In many cases you may want to use the NativeScript core theme instead
+of writing your own CSS rules. For a full list of class names in the theme
+refer to http://docs.nativescript.org/ui/theme.
+*/
