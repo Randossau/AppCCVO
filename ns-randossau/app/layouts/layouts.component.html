@@ -1,0 +1,80 @@
+<ActionBar backgroundColor="#171831", color= "#d0d0d0">
+    <Label *ngFor="let item of tabList; let i = index" 
+        [selectedIndex]="item.title" (selectedIndexChanged)="onSelectedIndexChanged($event)">
+    </Label>
+
+
+
+
+    <!-- <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap"></NavigationButton> -->
+
+
+    <ActionItem tap="onShare" 
+        ios.systemIcon="9" ios.position="left"
+        android.systemIcon="ic_menu_more" android.position="actionBar"></ActionItem>
+  </ActionBar>
+
+
+<!-- </BottomNavigation> -->
+<GridLayout>
+    <GridLayout>
+        <Tabs #tabs [selectedIndex]="defaultSelected" (selectedIndexChanged)="onSelectedIndexChanged($event)">
+            <TabContentItem [backgroundColor]="tabList[0].backgroundColor">
+                <page-router-outlet name="recommandations"></page-router-outlet>
+            </TabContentItem>
+            <TabContentItem [backgroundColor]="tabList[1].backgroundColor">
+                <page-router-outlet name="parcours"></page-router-outlet>
+            </TabContentItem>
+            <TabContentItem [backgroundColor]="tabList[2].backgroundColor">
+                <page-router-outlet name="accueil"></page-router-outlet>
+            </TabContentItem>
+            <TabContentItem [backgroundColor]="tabList[3].backgroundColor">
+                <page-router-outlet name="gps"></page-router-outlet>
+            </TabContentItem>
+            <TabContentItem [backgroundColor]="tabList[4].backgroundColor">
+                <page-router-outlet name="incidents"></page-router-outlet>
+            </TabContentItem>
+        </Tabs>
+    </GridLayout>
+
+    <!-- bottom tabs -->
+    <GridLayout height="auto" verticalAlignment="bottom" columns="*, *, *, *, *">
+
+        <!-- base layer -->
+        <AbsoluteLayout col="0" colSpan="5" verticalAlignment="bottom">
+            <GridLayout #tabBGContainer columns="auto, 10, auto, 10, auto">
+                <GridLayout #leftTabs col="0" colSpan="2" height="80" [backgroundColor]="tabContainer.backgroundColor"
+                    verticalAlignment="bottom" borderRadius="0 68 0 0">
+                </GridLayout>
+                <GridLayout #centerPatch col="1" colSpan="3" height="40"
+                    [backgroundColor]="tabContainer.backgroundColor" verticalAlignment="bottom"></GridLayout>
+                <GridLayout #rightTabs col="3" colSpan="4" height="80" [backgroundColor]="tabContainer.backgroundColor"
+                    verticalAlignment="bottom" borderRadius="68 0 0 0">
+                </GridLayout>
+
+                <!-- focus circle -->
+                <GridLayout #centerCircle col="1" colSpan="3" height="100" width="100" 
+                    [backgroundColor]="tabList[currentTabIndex].backgroundColor" borderRadius="50"
+                    verticalAlignment="bottom" marginBottom="10">
+                    <GridLayout verticalAlignment="center" horizontalAlignment="center" height="90" width="90"
+                        [backgroundColor]="tabContainer.focusColor" borderRadius="45"></GridLayout>
+                </GridLayout>
+
+            </GridLayout>
+        </AbsoluteLayout>
+
+        <!-- tab contents -->
+        <GridLayout #tabContents *ngFor="let item of tabList; let i = index" [col]="i" marginTop="20"
+            (tap)="onBottomNavTap(i)" verticalAlignment="middle">
+            <Label class="fa-light" [text]="item.text" verticalAlignment="middle" horizontalAlignment="center"
+                [color]="item.color" fontSize="20"></Label>
+        </GridLayout>
+
+        <!-- pan layer -->
+        <GridLayout #dragCircle column="0" colSpan="5" (pan)="onCenterCirclePan($event)" verticalAlignment="center"
+            horizontalAlignment="center" height="90" width="90" backgroundColor="transparent" borderRadius="45">
+        </GridLayout>
+
+    </GridLayout>
+
+</GridLayout>
