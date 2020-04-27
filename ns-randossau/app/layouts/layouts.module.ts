@@ -18,6 +18,8 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { RecommandationsComponent } from './recommandations/recommandations.component';
 import { SettingsComponent } from './settings/settings.component';
 import { SettingsRootComponent } from './settings/settings-root.component';
+import { AnimationsService } from './parcours/circuits/animations-service';
+import { LandmarksService } from './parcours/circuits/landmarks-service';
 
 @NgModule({
   declarations: [
@@ -49,6 +51,10 @@ import { SettingsRootComponent } from './settings/settings-root.component';
 
   schemas: [
     NO_ERRORS_SCHEMA
+  ],
+  providers: [
+      AnimationsService,
+      LandmarksService
   ]
 
 })

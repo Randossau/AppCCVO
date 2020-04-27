@@ -1,1 +1,65 @@
 /* Add mobile styles for the component here.  */
+/* Add mobile styles for the component here.  */
+.main-layout {
+    margin-top: 0;
+    margin-bottom: -2;
+}
+
+.animating-image-container {
+    vertical-align: top;
+}
+
+.list-item {
+    margin: 2;
+}
+
+.item-title {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    color: rgb(255, 255, 255);
+    vertical-align: top;
+    padding: 12;
+    font-size: 16;
+}
+
+.grid-bg-bottom {
+    background-color: rgba(0, 0, 0, 0.562);
+    height: 75;
+    width: 100%;
+    font-size: 12;
+}
+
+.item-details {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(255, 255, 255);
+    vertical-align: bottom;
+    font-size: 14;
+}
+
+/* .text-center {
+    background-color: rgba(0, 0, 0, 0.5);
+} */
+
+.action-bar-label {
+    font-size: 22;
+    align-items: center;
+    vertical-align: center;
+    color: white;
+}
+
+.action-bar-icon {
+    width: 20;
+    vertical-align: center;
+    margin: 12;
+}
+
+.icon-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa {
+    font-family: 'Font Awesome 5 Pro', 'fa-light-300';
+    font-weight: 300;
+}

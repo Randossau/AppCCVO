@@ -1,1 +1,133 @@
-<Button text="recommandations works!" class="btn btn-primary"></Button>
+<GridLayout class="page" [class.dialogOpen]="dialogOpen">
+    <GridLayout class="content">
+      <StackLayout>
+        <Button class="btn btn-primary" text="Niveau" (tap)="showDialog()"></Button>
+      </StackLayout>
+    </GridLayout>
+
+    <AbsoluteLayout class="dialog-wrapper">
+      <StackLayout class="dialog">
+        <!-- <Label textWrap="true" text="Are you sure you want to continue?"></Label>
+        <Button class="btn btn-primary" text="Yes"></Button>
+        <Button class="btn" text="No" (tap)="closeDialog()"></Button> -->
+
+
+
+            <GridLayout rows="*, *, *, *" columns="*, auto" height="200" width="80%">
+                <FlexboxLayout row="0" flexDirection="row" verticalAlignment="top"
+                    col="0">
+                    <Image
+                        src="https://play.nativescript.org/dist/assets/img/NativeScript_logo.png">
+                    </Image>
+                    <TextView editable="false" textWrap="true" color="white"
+                        height="25%">
+                        <FormattedString>
+                            <Span
+                                text="This is a text view that uses attributed text. You can use text attributes such as ">
+                            </Span>
+                            <Span text="bold, " fontWeight="Bold"></Span>
+                            <Span text="italic " fontStyle="Italic"></Span>
+                            <Span text="and "></Span>
+                            <Span text="underline." textDecoration="Underline"></Span>
+                            <Span
+                                text="This is a text view that uses attributed text. You can use text attributes such as ">
+                            </Span>
+                            <Span
+                                text="This is a text view that uses attributed text. You can use text attributes such as ">
+                            </Span>
+                            <Span
+                                text="This is a text view that uses attributed text. You can use text attributes such as ">
+                            </Span>
+                        </FormattedString>
+                    </TextView>
+                </FlexboxLayout>
+
+                <FlexboxLayout row="1" flexDirection="row" verticalAlignment="center" backgroundColor="green"
+                    col="0">
+                    <Image
+                        src="https://play.nativescript.org/dist/assets/img/NativeScript_logo.png">
+                    </Image>
+                    <TextView editable="false" textWrap="false" color="white"
+                        height="40">
+                        <FormattedString>
+                            <Span
+                                text="This is a text view that uses attributed text. You can use text attributes such as ">
+                            </Span>
+                            <Span text="bold, " fontWeight="Bold"></Span>
+                            <Span text="italic " fontStyle="Italic"></Span>
+                            <Span text="and "></Span>
+                            <Span text="underline." textDecoration="Underline"></Span>
+                            <Span
+                                text="This is a text view that uses attributed text. You can use text attributes such as ">
+                            </Span>
+                            <Span
+                                text="This is a text view that uses attributed text. You can use text attributes such as ">
+                            </Span>
+                            <Span
+                                text="This is a text view that uses attributed text. You can use text attributes such as ">
+                            </Span>
+                        </FormattedString>
+                    </TextView>
+                </FlexboxLayout>
+
+                <FlexboxLayout row="2" flexDirection="row" verticalAlignment="center"
+                    col="0">
+                    <Image
+                        src="https://play.nativescript.org/dist/assets/img/NativeScript_logo.png">
+                    </Image>
+                    <TextView editable="false"  textWrap="true" color="white"
+                        height="40">
+                        <FormattedString>
+                            <Span
+                                text="This is a text view that uses attributed text. You can use text attributes such as ">
+                            </Span>
+                            <Span text="bold, " fontWeight="Bold"></Span>
+                            <Span text="italic " fontStyle="Italic"></Span>
+                            <Span text="and "></Span>
+                            <Span text="underline." textDecoration="Underline"></Span>
+                            <Span
+                                text="This is a text view that uses attributed text. You can use text attributes such as ">
+                            </Span>
+                            <Span
+                                text="This is a text view that uses attributed text. You can use text attributes such as ">
+                            </Span>
+                            <Span
+                                text="This is a text view that uses attributed text. You can use text attributes such as ">
+                            </Span>
+                        </FormattedString>
+                    </TextView>
+                </FlexboxLayout>
+
+                <FlexboxLayout row="3" flexDirection="row" verticalAlignment="center"
+                    col="0">
+                    <Image
+                        src="https://play.nativescript.org/dist/assets/img/NativeScript_logo.png">
+                    </Image>
+                    <TextView editable="false" backgroundColor="red" color="white" textWrap="true"
+                        height="40">
+                        <FormattedString>
+                            <Span
+                                text="This is a text view that uses attributed text. You can use text attributes such as ">
+                            </Span>
+                            <Span text="bold, " fontWeight="Bold"></Span>
+                            <Span text="italic " fontStyle="Italic"></Span>
+                            <Span text="and "></Span>
+                            <Span text="underline." textDecoration="Underline"></Span>
+                            <Span
+                                text="This is a text view that uses attributed text. You can use text attributes such as ">
+                            </Span>
+                            <Span
+                                text="This is a text view that uses attributed text. You can use text attributes such as ">
+                            </Span>
+                            <Span
+                                text="This is a text view that uses attributed text. You can use text attributes such as ">
+                            </Span>
+                        </FormattedString>
+                    </TextView>
+                </FlexboxLayout>
+            </GridLayout>
+        </StackLayout>
+        <Button class="btn" text="Fermer" (tap)="closeDialog()"></Button> -->
+    </AbsoluteLayout>
+  </GridLayout>
+

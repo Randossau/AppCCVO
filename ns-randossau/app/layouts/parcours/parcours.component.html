@@ -1,1 +1,141 @@
-<Button text="parcours works!" class="btn btn-primary"></Button>
+<ActionBar class="action-bar" backgroundColor="#2B3238">
+  <NavigationButton visibility="collapsed"></NavigationButton>
+  <GridLayout
+    columns="auto,*,auto"
+    ios:padding="0 10"
+    height="100%"
+    width="100%"
+  >
+    <ActionButton #actionButton></ActionButton>
+    <Label
+      col="1"
+      text="Parcours de la Vallée d'Ossau"
+      class="action-bar-label"
+    ></Label>
+  </GridLayout>
+</ActionBar>
+
+<GridLayout height="100%">
+  <!-- <ListView #list [items]="landmarks" (itemTap)="onNavigationItemTap($event)"> -->
+  <ListView #list [items]="landmarks">
+    <ng-template let-item="item">
+      <GridLayout class="list-item">
+          <!-- THE BACKGROUND -->
+        <Image [src]="item.image" width="100%" stretch="aspectFill" class="item-image"></Image>
+         <!-- THE Text - title -->
+        <Label [text]="item.name" class="item-title"></Label>
+
+        <StackLayout orientation="horizontal" verticalAlignment="bottom" backgroundColor="#1718318c">
+        <GridLayout columns="auto, *, *, *, *, *, *" rows="*" horizontalAlignment="left" verticalAlignment="bottom"
+          class="grid-bg-bottom">
+
+            <StackLayout col="0">
+              <Label row="0"
+                [text]="item.pointdepart"
+                style="color: white; font-size: 13;"
+                class="text-center"
+              ></Label>
+              <Label row="1"
+                class="fa"
+                text="&#xf017;"
+                class="text-center"
+                style="color: white; font-size: 12;"
+                height="25"
+                margin="1"
+              ></Label>
+              <!-- <Image src="https://img.icons8.com/cotton/64/000000/pickup-point.png" height="18" margin="3"></Image> -->
+            </StackLayout>
+            <StackLayout backgroundColor="#fff" col="1" >
+              <Label
+                class="fa"
+                text="&#xf017;"
+                style="color: white; font-size: 12;"
+              ></Label>
+              <Label
+                text="timetime"
+                style="color: white; font-size: 22;"
+                class="text-center"
+              ></Label>
+            </StackLayout>
+            <StackLayout backgroundColor="#fff" col="2">
+              <Label
+                [text]="item.distance"
+                style="color: white; font-size: 12;"
+                class="text-center"
+              ></Label>
+              <Image
+                src="~/layouts/icons/distance.png"
+                height="18"
+                margin="3"
+              ></Image>
+            </StackLayout>
+            <StackLayout backgroundColor="#fff" col="3">
+              <Label
+                [text]="item.elevation"
+                style="color: white; font-size: 12;"
+                class="text-center"
+              ></Label>
+              <Image
+                src="~/layouts/icons/elevation.png"
+                height="18"
+                margin="3"
+              ></Image>
+            </StackLayout>
+            <StackLayout backgroundColor="green" col="4">
+              <Label
+                [text]="item.type"
+                style="color: white; font-size: 12;"
+                class="text-center"
+              ></Label>
+              <Image
+                src="~/layouts/icons/vtt.png"
+                height="18"
+                margin="3"
+              ></Image>
+            </StackLayout>
+            <StackLayout class="icon-center" backgroundColor="green" col="5">
+              <!-- <Label text="non Boucle" style="color: white; font-size: 12;" class="text-center"></Label> -->
+              <Image
+                src="~/layouts/icons/noboucle.png"
+                height="24"
+                margin="3"
+              ></Image>
+            </StackLayout>
+
+            <!-- <StackLayout class="icon-center" backgroundColor="#77b509">
+									   <Label text="télécharger" style="color: white; font-size: 12;" class="text-center"></Label>
+									<Image src="~/layouts/icons/gpx.png" height="35" margin="3"></Image>
+								  </StackLayout> -->
+
+            <StackLayout col="6"
+              orientation="horizontal"
+              backgroundColor="green"
+              style="border-radius: 13%;"
+            >
+              <!-- <Label [text]="item.circuit" style="color: white; font-size: 12;" class="text-center"></Label> -->
+              <Image
+                src="~/layouts/icons/gpx.png"
+                height="35"
+                margin="2"
+                (tap)="onGPSTap()"
+              ></Image>
+              <Image
+                src="~/layouts/icons/gps.png"
+                height="35"
+                margin="2"
+              ></Image>
+            </StackLayout>
+        </GridLayout>
+    </StackLayout>
+      </GridLayout>
+    </ng-template>
+  </ListView>
+</GridLayout>
+
+<!-- <AbsoluteLayout
+  #animatingImageContainer
+  opacity="0"
+  class="animating-image-container"
+>
+  <Image #animatingImage width="100%"></Image>
+</AbsoluteLayout> -->
