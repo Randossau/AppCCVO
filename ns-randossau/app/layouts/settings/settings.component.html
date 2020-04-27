@@ -1,1 +1,30 @@
-<Button text="settings works!" class="btn btn-primary"></Button>
+<!-- FIX Transition on Android and Icon X instead of cog-->
+
+<ActionBar title= "Réglages" backgroundColor="#171831" color= "#d0d0d0">
+    <ActionItem icon="~/assets/img/icons8-settings-50.png" ios.position="right" (tap)="closeModal(scrollView)">
+    </ActionItem>
+</ActionBar>
+
+<!-- <ScrollView #scrollView class="page">
+    <StackLayout class="home-panel">
+        <Button text="Général" class="btn btn-primary"></Button>
+        <Button text="Profil" class="btn btn-primary"></Button>
+        <Button text="Connexion" class="btn btn-primary"></Button>
+
+    </StackLayout>
+</ScrollView> -->
+
+<ScrollView #scrollView><ListView class="list-group" [items]="countries"
+    style="height:1250px">
+    <ng-template let-country="item">
+        <FlexboxLayout justifyContent="space-between" alignItems="center">
+            <FlexboxLayout flexDirection="row" class="list-group-item">
+                <Image [src]="country.imageSrc" class="thumb"></Image>
+                <Label [text]="country.name" class="list-group-item-heading"
+                    verticalAlignment="center"></Label>
+            </FlexboxLayout>
+            <Label [text]="country.open" [class]="country.type" paddingRight="18"></Label>
+        </FlexboxLayout>
+    </ng-template>
+</ListView>
+</ScrollView>

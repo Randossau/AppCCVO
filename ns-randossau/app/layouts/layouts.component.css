@@ -1,3 +1,21 @@
+@font-face {
+    font-family: 'Glyphter';
+    src: url('../fonts/Glyphter.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+[class*='icon-']:before{
+	display: inline-block;
+   font-family: 'Glyphter';
+   font-style: normal;
+   font-weight: normal;
+   line-height: 1;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale
+}
+.icon-nav:before{content:'\0041';}
+
+
 .home-panel{
     vertical-align: center;
     font-size: 20;

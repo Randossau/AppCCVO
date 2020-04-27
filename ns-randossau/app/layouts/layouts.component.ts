@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, ViewChildren, QueryList } from "@angular/core";
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, ViewChildren, QueryList, ViewContainerRef } from "@angular/core";
 import { RouterExtensions } from 'nativescript-angular';
 import { ActivatedRoute } from "@angular/router";
 import { screen } from 'platform';
@@ -6,7 +6,11 @@ import { GridLayout } from "ui/layouts/grid-layout";
 import { PanGestureEventData, GestureStateTypes, GestureEventData } from "ui/gestures";
 import { AnimationCurve } from "ui/enums";
 import { SelectedIndexChangedEventData } from "tns-core-modules/ui/tab-view";
-import { Page } from "tns-core-modules/ui/page"
+import { Page } from "tns-core-modules/ui/page";
+import { ModalDialogOptions, ModalDialogService } from "nativescript-angular/modal-dialog";
+
+import { SettingsRootComponent } from './settings/settings-root.component';
+
 
 
 @Component({
@@ -49,17 +53,26 @@ export class LayoutsComponent implements OnInit, AfterViewInit {
         { text: String.fromCharCode(0xf071), title:"Incidents" ,backgroundColor: 'rgba(255, 255, 255, 0)', color: '#d0d0d0' }
     ];
 
-    // currentPath: string;
 
     currentTabIndex: number = 2;
     defaultSelected: number = 2;
 
     constructor(private routerExtension: RouterExtensions,
-        private activeRoute: ActivatedRoute, private page: Page) {
+        private activeRoute: ActivatedRoute, private page: Page, private modalService: ModalDialogService, private vcRef: ViewContainerRef) {
     }
 
     ngOnInit(): void {
     }
+
+    // Modal box for settings component
+    openModalSettings(): void {
+		const options: ModalDialogOptions = {
+			fullscreen: true,
+			viewContainerRef: this.vcRef
+		};
+
+		this.modalService.showModal(SettingsRootComponent, options);
+	}
 
 
     // --------------------------------------------------------------------
@@ -105,6 +118,7 @@ export class LayoutsComponent implements OnInit, AfterViewInit {
 
         // set current index to new index
         this.currentTabIndex = index;
+
     }
 
 

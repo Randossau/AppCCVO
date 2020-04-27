@@ -1,17 +1,22 @@
-<ActionBar backgroundColor="#171831", color= "#d0d0d0">
-    <Label *ngFor="let item of tabList; let i = index" 
-        [selectedIndex]="item.title" (selectedIndexChanged)="onSelectedIndexChanged($event)">
-    </Label>
+<!-- TODO Title in the action bar
+     FIX Action bar icon size
+     FIX Bottom navigation circle cutout -->
 
-
+<ActionBar class="action-bar" backgroundColor="#171831", color= "#d0d0d0">
+    <!-- <Label
+    *ngFor="let item of tabList"
+    [text]="item.title" color="white" horizontalAlignment="left"
+        >
+    </Label> -->
 
 
     <!-- <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap"></NavigationButton> -->
+    <!-- icon="~/assets/img/icons8-settings-50.png" ios.position="right" -->
+    <!-- -->
 
-
-    <ActionItem tap="onShare" 
-        ios.systemIcon="9" ios.position="left"
-        android.systemIcon="ic_menu_more" android.position="actionBar"></ActionItem>
+    <ActionItem icon="~/assets/img/icons8-settings-50.png" ios.position="right" (tap)="openModalSettings()">
+        <!-- <img src="~/assets/img/icons8-settings-50.png" width="30"/> -->
+    </ActionItem>
   </ActionBar>
 
 
@@ -37,8 +42,14 @@
         </Tabs>
     </GridLayout>
 
+
+
+
     <!-- bottom tabs -->
     <GridLayout height="auto" verticalAlignment="bottom" columns="*, *, *, *, *">
+
+        <!-- <GridLayout #centerPatch col="1" colSpan="3" height="80" borderRadius="50"
+        backgroundColor="rgba(255, 255, 255, 1)" verticalAlignment="center"></GridLayout> -->
 
         <!-- base layer -->
         <AbsoluteLayout col="0" colSpan="5" verticalAlignment="bottom">
@@ -46,14 +57,19 @@
                 <GridLayout #leftTabs col="0" colSpan="2" height="80" [backgroundColor]="tabContainer.backgroundColor"
                     verticalAlignment="bottom" borderRadius="0 68 0 0">
                 </GridLayout>
+
                 <GridLayout #centerPatch col="1" colSpan="3" height="40"
-                    [backgroundColor]="tabContainer.backgroundColor" verticalAlignment="bottom"></GridLayout>
+                    [backgroundColor]="tabContainer.backgroundColor" verticalAlignment="bottom"
+                    text="A"></GridLayout>
+
+
                 <GridLayout #rightTabs col="3" colSpan="4" height="80" [backgroundColor]="tabContainer.backgroundColor"
                     verticalAlignment="bottom" borderRadius="68 0 0 0">
                 </GridLayout>
 
+
                 <!-- focus circle -->
-                <GridLayout #centerCircle col="1" colSpan="3" height="100" width="100" 
+                <GridLayout #centerCircle col="1" colSpan="3" height="100" width="100"
                     [backgroundColor]="tabList[currentTabIndex].backgroundColor" borderRadius="50"
                     verticalAlignment="bottom" marginBottom="10">
                     <GridLayout verticalAlignment="center" horizontalAlignment="center" height="90" width="90"

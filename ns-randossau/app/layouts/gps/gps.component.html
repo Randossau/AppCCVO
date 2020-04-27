@@ -1,1 +1,57 @@
-<Button text="gps works!" class="btn btn-primary"></Button>
+<!-- <Button text="gps works!" class="btn btn-primary"></Button> -->
+<AbsoluteLayout width="100%" height="100%" backgroundColor="lightgray">
+	<ContentView left="0" top="0" height="100%" width="100%">
+	    <Mapbox
+	        #map
+	        accessToken="pk.eyJ1IjoiZnJlZGVyaWtobyIsImEiOiJjazlkeXg3cnowMGZ5M2dvNmd1OGx3MmdzIn0.bGL8O5zeZYX5sU0Ap4j10Q"
+	        mapStyle="mapbox://styles/frederikho/ck9edcwnp1pyu1iu95m3z3ruo"
+	        latitude="43.086894109999115"
+	        longitude="-0.4197242597072231"
+            hideCompass="true"
+
+	        zoomLevel="14"
+	        showUserLocation="true"
+	        disableZoom="false"
+	        disableRotation="false"
+	        disableScroll="false"
+	        disableTilt="false"
+	        (mapReady)="onMapReady($event)">
+	    </Mapbox>
+	</ContentView>
+	<!-- <AbsoluteLayout left="0" top="0" height="100%" width="100%" stretchLastChild="true">
+		<StackLayout left="20%" top="30%" orientation="vertical" backgroundColor="white" width="90%" height="50" class="radius">
+			<SearchBar
+				hint="Destination..."
+				width="100%" height="100%"
+				textFieldHintColor="gray"
+				[text]="searchPhrase"
+				(loaded)="sBLoaded($event)"
+				(submit)="onSearchSubmit($event)">
+			</SearchBar>
+		</StackLayout>
+	    <ScrollView left="0" top="500" orientation="horizontal" sdkExampleTitle sdkToggleNavButton width="100%" class="radiusBorder marginHorizontal menuScroll">
+			<GridLayout columns="auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto">
+				<StackLayout col="0" orientation="vertical" class="menu">
+					<Image src="~/images/mie_ayam_active.png" class='menu-icon'></Image>
+					<Label text="Mie Ayam" class="menu-label"></Label>
+				</StackLayout>
+				<StackLayout col="1" rientation="vertical" class="menu">
+					<Image src="~/images/ketoprak_active.png" class="menu-icon"></Image>
+					<Label text="Ketroprak" class="menu-label"></Label>
+				</StackLayout>
+				<StackLayout col="2" orientation="vertical" class="menu">
+					<Image src="~/images/roti_active.png" class="menu-icon"></Image>
+					<Label text="Roti" class="menu-label"></Label>
+				</StackLayout>
+				<StackLayout col="3" orientation="vertical" class="menu">
+					<Image src="~/images/sate_active.png" class="menu-icon"></Image>
+					<Label text="Sate" class="menu-label"></Label>
+				</StackLayout>
+				<StackLayout col="4" orientation="vertical" class="menu menu-last">
+					<Image src="~/images/nasi_goreng_active.png" class="menu-icon"></Image>
+					<Label text="Nasi Goreng" class="menu-label"></Label>
+				</StackLayout>
+			</GridLayout>
+		</ScrollView>
+	</AbsoluteLayout> -->
+</AbsoluteLayout>
