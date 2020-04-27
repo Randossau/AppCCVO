@@ -10,6 +10,16 @@ export class RecommandationsComponent implements OnInit {
 
   constructor() { }
 
+  dialogOpen = false;
+
+  showDialog() {
+    this.dialogOpen = true;
+  }
+
+  closeDialog() {
+    this.dialogOpen = false;
+  }
+
   ngOnInit(): void {
   }
 

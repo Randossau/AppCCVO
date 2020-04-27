@@ -1,1 +1,138 @@
-<Button text="parcours works!" class="btn btn-primary"></Button>
+<ActionBar class="action-bar" backgroundColor="#2B3238">
+  <NavigationButton visibility="collapsed"></NavigationButton>
+  <GridLayout
+    columns="auto,*,auto"
+    ios:padding="0 10"
+    height="100%"
+    width="100%"
+  >
+    <ActionButton #actionButton></ActionButton>
+    <Label
+      col="1"
+      text="Parcours de la Vallée d'Ossau"
+      class="action-bar-label"
+    ></Label>
+  </GridLayout>
+</ActionBar>
+
+<GridLayout height="100%">
+  <!-- <ListView #list [items]="landmarks" (itemTap)="onNavigationItemTap($event)"> -->
+  <ListView #list [items]="landmarks">
+    <ng-template let-item="item">
+      <GridLayout class="list-item">
+          <!-- THE BACKGROUND -->
+        <Image [src]="item.image" width="100%" stretch="aspectFill" class="item-image"></Image>
+         <!-- THE Text - title -->
+         <GridLayout width="500" height="50"  columns="4*, *" verticalAlignment="top">
+             <Label [text]="item.name" class="item-title" col="0"></Label>
+             <Label [text]="'Niveau:'+ item.niveau" class="item-title" col="1" backgroundColor="#171831"></Label>
+         </GridLayout>
+
+         <GridLayout width="50" height="50"  verticalAlignment="center" horizontalAlignment="right" class="icon-center"
+         orientation="horizontal" backgroundColor="#77b509" (tap)="onGPSTap($event)">
+          <Label
+          class="fa"
+          text="&#xf601;"
+          style="color: white; font-size: 30; margin-left: 7;"></Label>
+         </GridLayout>
+
+        <StackLayout orientation="horizontal" verticalAlignment="bottom" backgroundColor="#1718318c" class="menu-icon" width="500">
+
+        <GridLayout columns="auto, auto, auto, auto, auto, auto, auto" rows="*" horizontalAlignment="center" verticalAlignment="bottom"
+          class="grid-bg-bottom" width="500">
+
+            <StackLayout col="0" verticalAlignment="center" orientation="vertical">
+              <Label
+                [text]="item.pointDepart"
+                style="color: white; font-size: 14;"
+                class="text-center"
+              ></Label>
+              <Label
+
+              class="fa"
+              text="&#xf649;"
+              style="color: white; font-size: 20; margin-left: 10;"
+            ></Label>
+
+            </StackLayout>
+            <StackLayout col="1" verticalAlignment="center" horizontalAlignment="center">
+                <Label
+                [text]="item.duree"
+                style="color: white; font-size: 14;"
+                class="text-center"
+              ></Label>
+              <Label
+              class="fa"
+              text="&#xf017;"
+              style="color: white; font-size: 20;"
+            ></Label>
+            </StackLayout>
+
+            <StackLayout col="2" verticalAlignment="center" horizontalAlignment="center">
+                <Label
+                [text]="item.elevation +'m'"
+                style="color: white; font-size: 14;"
+                class="text-center"
+              ></Label>
+              <Label
+              class="fa"
+              text="&#xf6fc;"
+              style="color: white; font-size: 20;"
+            ></Label>
+            </StackLayout>
+
+            <StackLayout verticalAlignment="center" col="3" horizontalAlignment="center">
+                <Label
+                [text]="item.distance +'km'"
+                style="color: white; font-size: 16;"
+                class="text-center"
+              ></Label>
+              <Label
+              class="fa"
+              text="&#xf6fd;"
+              style="color: white; font-size: 20;"
+            ></Label>
+            </StackLayout>
+
+            <StackLayout verticalAlignment="center" col="4" horizontalAlignment="center">
+                <Label
+                class="fa"
+                text="&#xf6ec;"
+                style="color: white; font-size: 36;"
+              ></Label>
+
+            </StackLayout>
+
+            <StackLayout verticalAlignment="center" col="5" horizontalAlignment="center">
+              <Label
+              class="fa"
+              text="&#xf021;"
+              style="color: white; font-size: 36;"
+            ></Label>
+            <!-- text="&#xf021;" -->
+          </StackLayout>
+
+            <StackLayout class="icon-center" verticalAlignment="center" col="6" horizontalAlignment="center">
+                <Label
+                class="fa"
+                text="&#xf602;"
+                style="color: white; font-size: 36;"
+              ></Label>
+              <!-- text="&#xf602;" -->
+            </StackLayout>
+        </GridLayout>
+    </StackLayout>
+      </GridLayout>
+    </ng-template>
+  </ListView>
+
+</GridLayout>
+
+
+<!-- <AbsoluteLayout
+  #animatingImageContainer
+  opacity="0"
+  class="animating-image-container"
+>
+  <Image #animatingImage width="100%"></Image>
+</AbsoluteLayout> -->

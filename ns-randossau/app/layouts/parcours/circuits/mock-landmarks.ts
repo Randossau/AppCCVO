@@ -1,0 +1,98 @@
+import { Landmark } from './landmark';
+import { defer } from 'rxjs';
+
+export const LANDMARKS: Landmark[] = [
+    {
+        id: 0,
+        name: "La Bastide - (Circ. Patrimoine)",
+        description: "La vallée d'Ossau est une vallée des Pyrénées françaises, située en Béarn dans le département des Pyrénées-Atlantiques en région Nouvelle-Aquitaine. Ses habitants sont les Ossalois. ",
+        image: "~/images/photos/bastide1.png",
+        location: "vallée d'Ossau",
+        pointDepart: "Bastide",
+        niveau: 1,
+        distance: 5,
+        elevation: 60,
+        duree: "2h",
+        type: "pedestre",
+        circuit: "",
+    },
+    {
+        id: 1,
+        name: "Le vieux château",
+        description: "La vallée d'Ossau est une vallée des Pyrénées françaises, située en Béarn dans le département des Pyrénées-Atlantiques en région Nouvelle-Aquitaine. Ses habitants sont les Ossalois. ",
+        image: "~/images/photos/bastide2.png",
+        location: "vallée d'Ossau",
+        pointDepart: "chateau",
+        niveau: 2,
+        distance: 4,
+        elevation: 60,
+        duree: "1h",
+        type: "pedestre"
+    },
+    {
+        id: 2,
+        name: "Le piémont ossalois (Circ. Patrimoine)",
+        description: "La vallée d'Ossau est une vallée des Pyrénées françaises, située en Béarn dans le département des Pyrénées-Atlantiques en région Nouvelle-Aquitaine. Ses habitants sont les Ossalois. ",
+        image: "~/images/photos/bastide1.png",
+        location: "vallée d'Ossau",
+        pointDepart: "Bastide",
+        niveau: 1,
+        distance: 9,
+        elevation: 55,
+        duree: "2h",
+        type: "pedestre"
+    },
+    {
+        id: 3,
+        name: "Les 3trois croix",
+        description: "La vallée d'Ossau est une vallée des Pyrénées françaises, située en Béarn dans le département des Pyrénées-Atlantiques en région Nouvelle-Aquitaine. Ses habitants sont les Ossalois. ",
+        image: "~/images/photos/bastide2.png",
+        location: "vallée d'Ossau",
+        pointDepart: "Bastide",
+        niveau: 2,
+        distance: 3.5,
+        elevation: 45,
+        duree: "3h",
+        type: "pedestre"
+    },
+    {
+        id: 4,
+        name: "Le tour du dolmen",
+        description: "La vallée d'Ossau est une vallée des Pyrénées françaises, située en Béarn dans le département des Pyrénées-Atlantiques en région Nouvelle-Aquitaine. Ses habitants sont les Ossalois. ",
+        image: "~/images/photos/bastide1.png",
+        location: "vallée d'Ossau",
+        pointDepart: "Bastide",
+        niveau: 1,
+        distance: 8,
+        elevation: 50,
+        duree: "1.5h",
+        type: "pedestre"
+    },
+    {
+        id: 5,
+        name: "Les chênes",
+        description: "La vallée d'Ossau est une vallée des Pyrénées françaises, située en Béarn dans le département des Pyrénées-Atlantiques en région Nouvelle-Aquitaine. Ses habitants sont les Ossalois. ",
+        image: "~/images/photos/bastide2.png",
+        location: "vallée d'Ossau",
+        pointDepart: "Bastidev",
+        niveau: 2,
+        distance: 14,
+        elevation: 75,
+        duree: "2h",
+        type: "pedestre"
+    },
+    {
+        id: 6,
+        name: "Les pierres (Circ. Patrimoine)",
+        description: "La vallée d'Ossau est une vallée des Pyrénées françaises, située en Béarn dans le département des Pyrénées-Atlantiques en région Nouvelle-Aquitaine. Ses habitants sont les Ossalois. ",
+        image: "~/images/photos/bastide1.png",
+        location: "vallée d'Ossau",
+        pointDepart: "Bastide",
+        niveau: 3,
+        distance: 5,
+        elevation: 21,
+        duree: "2h",
+        type: "pedestre",
+        circuit: "&#xf021;",
+    }
+]
