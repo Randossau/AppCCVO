@@ -4,13 +4,11 @@ export class Landmark {
     description: string;
     image: string;
     location: string;
-    likes?: number;
-    comments?: number;
     type?: string;
-    niveau?: number | string;
-    circuit?: boolean;
+    niveau?: number;
+    circuit?: boolean | string;
     titre?: string;
-    pointdepart?: string;
+    pointDepart?: string;
     duree?: string;
     pointGPS?: string;
     distance?: number;

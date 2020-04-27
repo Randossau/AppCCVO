@@ -62,4 +62,17 @@
 .fa {
     font-family: 'Font Awesome 5 Pro', 'fa-light-300';
     font-weight: 300;
+    align-self: center;
+    margin-top: 2;
+    vertical-align: center;
 }
+
+.menu-icon{
+    width: 100%;
+    height: 120;
+}
+
+ListView {
+    padding-bottom: 100;
+    background-color: #fff;
+  }

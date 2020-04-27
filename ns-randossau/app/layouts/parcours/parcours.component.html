@@ -23,114 +23,111 @@
           <!-- THE BACKGROUND -->
         <Image [src]="item.image" width="100%" stretch="aspectFill" class="item-image"></Image>
          <!-- THE Text - title -->
-        <Label [text]="item.name" class="item-title"></Label>
+         <GridLayout width="500" height="50"  columns="4*, *" verticalAlignment="top">
+             <Label [text]="item.name" class="item-title" col="0"></Label>
+             <Label [text]="'Niveau:'+ item.niveau" class="item-title" col="1" backgroundColor="#171831"></Label>
+         </GridLayout>
 
-        <StackLayout orientation="horizontal" verticalAlignment="bottom" backgroundColor="#1718318c">
-        <GridLayout columns="auto, *, *, *, *, *, *" rows="*" horizontalAlignment="left" verticalAlignment="bottom"
-          class="grid-bg-bottom">
+         <GridLayout width="50" height="50"  verticalAlignment="center" horizontalAlignment="right" class="icon-center"
+         orientation="horizontal" backgroundColor="#77b509" (tap)="onGPSTap($event)">
+          <Label
+          class="fa"
+          text="&#xf601;"
+          style="color: white; font-size: 30; margin-left: 7;"></Label>
+         </GridLayout>
 
-            <StackLayout col="0">
-              <Label row="0"
-                [text]="item.pointdepart"
-                style="color: white; font-size: 13;"
+        <StackLayout orientation="horizontal" verticalAlignment="bottom" backgroundColor="#1718318c" class="menu-icon" width="500">
+
+        <GridLayout columns="auto, auto, auto, auto, auto, auto, auto" rows="*" horizontalAlignment="center" verticalAlignment="bottom"
+          class="grid-bg-bottom" width="500">
+
+            <StackLayout col="0" verticalAlignment="center" orientation="vertical">
+              <Label
+                [text]="item.pointDepart"
+                style="color: white; font-size: 14;"
                 class="text-center"
               ></Label>
-              <Label row="1"
+              <Label
+
+              class="fa"
+              text="&#xf649;"
+              style="color: white; font-size: 20; margin-left: 10;"
+            ></Label>
+
+            </StackLayout>
+            <StackLayout col="1" verticalAlignment="center" horizontalAlignment="center">
+                <Label
+                [text]="item.duree"
+                style="color: white; font-size: 14;"
+                class="text-center"
+              ></Label>
+              <Label
+              class="fa"
+              text="&#xf017;"
+              style="color: white; font-size: 20;"
+            ></Label>
+            </StackLayout>
+
+            <StackLayout col="2" verticalAlignment="center" horizontalAlignment="center">
+                <Label
+                [text]="item.elevation +'m'"
+                style="color: white; font-size: 14;"
+                class="text-center"
+              ></Label>
+              <Label
+              class="fa"
+              text="&#xf6fc;"
+              style="color: white; font-size: 20;"
+            ></Label>
+            </StackLayout>
+
+            <StackLayout verticalAlignment="center" col="3" horizontalAlignment="center">
+                <Label
+                [text]="item.distance +'km'"
+                style="color: white; font-size: 16;"
+                class="text-center"
+              ></Label>
+              <Label
+              class="fa"
+              text="&#xf6fd;"
+              style="color: white; font-size: 20;"
+            ></Label>
+            </StackLayout>
+
+            <StackLayout verticalAlignment="center" col="4" horizontalAlignment="center">
+                <Label
                 class="fa"
-                text="&#xf017;"
-                class="text-center"
-                style="color: white; font-size: 12;"
-                height="25"
-                margin="1"
+                text="&#xf6ec;"
+                style="color: white; font-size: 36;"
               ></Label>
-              <!-- <Image src="https://img.icons8.com/cotton/64/000000/pickup-point.png" height="18" margin="3"></Image> -->
+
             </StackLayout>
-            <StackLayout backgroundColor="#fff" col="1" >
+
+            <StackLayout verticalAlignment="center" col="5" horizontalAlignment="center">
               <Label
+              class="fa"
+              text="&#xf021;"
+              style="color: white; font-size: 36;"
+            ></Label>
+            <!-- text="&#xf021;" -->
+          </StackLayout>
+
+            <StackLayout class="icon-center" verticalAlignment="center" col="6" horizontalAlignment="center">
+                <Label
                 class="fa"
-                text="&#xf017;"
-                style="color: white; font-size: 12;"
+                text="&#xf602;"
+                style="color: white; font-size: 36;"
               ></Label>
-              <Label
-                text="timetime"
-                style="color: white; font-size: 22;"
-                class="text-center"
-              ></Label>
-            </StackLayout>
-            <StackLayout backgroundColor="#fff" col="2">
-              <Label
-                [text]="item.distance"
-                style="color: white; font-size: 12;"
-                class="text-center"
-              ></Label>
-              <Image
-                src="~/layouts/icons/distance.png"
-                height="18"
-                margin="3"
-              ></Image>
-            </StackLayout>
-            <StackLayout backgroundColor="#fff" col="3">
-              <Label
-                [text]="item.elevation"
-                style="color: white; font-size: 12;"
-                class="text-center"
-              ></Label>
-              <Image
-                src="~/layouts/icons/elevation.png"
-                height="18"
-                margin="3"
-              ></Image>
-            </StackLayout>
-            <StackLayout backgroundColor="green" col="4">
-              <Label
-                [text]="item.type"
-                style="color: white; font-size: 12;"
-                class="text-center"
-              ></Label>
-              <Image
-                src="~/layouts/icons/vtt.png"
-                height="18"
-                margin="3"
-              ></Image>
-            </StackLayout>
-            <StackLayout class="icon-center" backgroundColor="green" col="5">
-              <!-- <Label text="non Boucle" style="color: white; font-size: 12;" class="text-center"></Label> -->
-              <Image
-                src="~/layouts/icons/noboucle.png"
-                height="24"
-                margin="3"
-              ></Image>
-            </StackLayout>
-
-            <!-- <StackLayout class="icon-center" backgroundColor="#77b509">
-									   <Label text="télécharger" style="color: white; font-size: 12;" class="text-center"></Label>
-									<Image src="~/layouts/icons/gpx.png" height="35" margin="3"></Image>
-								  </StackLayout> -->
-
-            <StackLayout col="6"
-              orientation="horizontal"
-              backgroundColor="green"
-              style="border-radius: 13%;"
-            >
-              <!-- <Label [text]="item.circuit" style="color: white; font-size: 12;" class="text-center"></Label> -->
-              <Image
-                src="~/layouts/icons/gpx.png"
-                height="35"
-                margin="2"
-                (tap)="onGPSTap()"
-              ></Image>
-              <Image
-                src="~/layouts/icons/gps.png"
-                height="35"
-                margin="2"
-              ></Image>
+              <!-- text="&#xf602;" -->
             </StackLayout>
         </GridLayout>
     </StackLayout>
       </GridLayout>
     </ng-template>
   </ListView>
+
 </GridLayout>
+
 
 <!-- <AbsoluteLayout
   #animatingImageContainer
