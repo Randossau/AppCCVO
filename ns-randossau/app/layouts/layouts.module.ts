@@ -16,6 +16,8 @@ import { IncidentsComponent } from './incidents/incidents.component';
 import { ParcoursComponent } from './parcours/parcours.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { RecommandationsComponent } from './recommandations/recommandations.component';
+import { SettingsComponent } from './settings/settings.component';
+import { SettingsRootComponent } from './settings/settings-root.component';
 
 @NgModule({
   declarations: [
@@ -24,8 +26,14 @@ import { RecommandationsComponent } from './recommandations/recommandations.comp
     IncidentsComponent,
     ParcoursComponent,
     AccueilComponent,
-    RecommandationsComponent
+    RecommandationsComponent,
+    SettingsComponent,
+    SettingsRootComponent
   ],
+
+  entryComponents: [
+    SettingsRootComponent
+],
 
   imports: [
     NativeScriptUISideDrawerModule,
@@ -45,4 +53,3 @@ import { RecommandationsComponent } from './recommandations/recommandations.comp
 
 })
 export class LayoutsModule { }
- 

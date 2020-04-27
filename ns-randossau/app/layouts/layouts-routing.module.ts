@@ -7,11 +7,12 @@ import { GpsComponent } from "./gps/gps.component";
 import { IncidentsComponent } from "./incidents/incidents.component";
 import { ParcoursComponent } from "./parcours/parcours.component";
 import { RecommandationsComponent } from "./recommandations/recommandations.component";
+import { SettingsComponent } from "./settings/settings.component";
 
 
 const routes: Routes = [
     {
-        
+
     //     path: "default", component: LayoutsComponent, children: [
     //         { path: "layouts", redirectTo: "accueil", pathMatch: "full"},
     //         { path: "accueil", loadChildren: () => import("~/layouts/accueil/accueil.module").then(m => m.AccueilModule) },
@@ -24,17 +25,18 @@ const routes: Routes = [
     //         { path: "settings", loadChildren: () => import("~/layouts/settings/settings.module").then(m => m.SettingsModule) },
     //     ]
     // }
-    
-        
+
+
         path: "default", component: LayoutsComponent, children: [
             { path: "accueil", component:AccueilComponent, outlet:"accueil"},
             { path: "gps", component:GpsComponent, outlet:"gps"},
             { path: "incidents", component:IncidentsComponent, outlet:"incidents" },
             { path: "parcours", component:ParcoursComponent, outlet:"parcours" },
             { path: "recommandations", component:RecommandationsComponent, outlet:"recommandations"},
+            {path: "settings", component:SettingsComponent, outlet:"settings"}
         ]
     }
-    
+
 ];
 
 @NgModule({

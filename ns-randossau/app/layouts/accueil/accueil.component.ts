@@ -18,6 +18,7 @@ export class AccueilComponent implements OnInit {
     this.page.backgroundImage = '~/assets/img/accueil.jpg';
     this.page.style.backgroundSize='cover';
     this.page.style.backgroundRepeat='no-repeat';
+    this.page.style.backgroundPosition='center';
   }
 
 }
