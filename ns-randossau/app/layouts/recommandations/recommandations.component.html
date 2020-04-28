@@ -154,25 +154,25 @@
             </GridLayout>
 
             <!-- TO CREATE CATEGORIES -->
-            <GridLayout columns=" auto, *, auto " rows="auto" width="100%" height="auto" class="owe-dashboard">
+            <GridLayout columns=" auto, auto, auto " rows="auto" width="100%" height="auto" class="owe-dashboard">
                 <StackLayout id="category1" (tap)="onTouch($event)" category="balisage" row="0" col="0"
                     orientation="vertical" class="owe-dashboard-item active">
                     <StackLayout orientation="horizontal" class="dashboard-title">
-                        <Label text="&#xf277; Balisage" class="dashboard-title__text"> </Label>
+                        <Label text="&#xf277; Balisage" class="dashboard-title__text fa-light"> </Label>
                     </StackLayout>
                 </StackLayout>
 
                 <StackLayout id="category2" (tap)="onTouch($event)" category="niveau" row="0" col="1"
                     orientation="vertical" class="owe-dashboard-item">
                     <StackLayout orientation="horizontal" class="dashboard-title">
-                        <Label text="&#xf102; Niveaux" class="dashboard-title__text"> </Label>
+                        <Label text="&#xf102; Niveaux" class="dashboard-title__text fa-light"> </Label>
                     </StackLayout>
                 </StackLayout>
 
                 <StackLayout id="category3" (tap)="onTouch($event)" category="recom" row="0" col="2"
                     orientation="vertical" class="owe-dashboard-item">
                     <StackLayout orientation="horizontal" class="dashboard-title">
-                        <Label text="&#xf46d; Recommandations" class="dashboard-title__text"></Label>
+                        <Label text="&#xf46d; Recommandations" class="dashboard-title__text fa-light"></Label>
                     </StackLayout>
                 </StackLayout>
             </GridLayout>
@@ -306,168 +306,159 @@
                     </StackLayout>
 
 
-                    <!-- TO CREATE ITEMS 5 -6   AND SHOW BY ITEM -->
+                    <!-- TO CREATE ITEMS 5 -6 - 7 - 8 FOR NIVEAUX CATEGORY   AND SHOW BY ITEM -->
+
                     <StackLayout id="item5" orientation="vertical" class="owe-list-item" width="100%">
                         <GridLayout columns="auto, *, auto" rows="auto" width="100%" height="auto"
                             class="owe-main-info">
-                            <Image row="0" col="0" src="~/assets/img/niveau/niv1.png" class="owe-category-icon niv"
-                                verticalAlignment="top" ></Image>
+                                <Label row="0" col="0" text="A" class="owe-category-icon niv icon-level" backgroundColor="green"
+                                verticalAlignment="top" ></Label>
                             <StackLayout row="0" col="1" orientation="vertical" class="owe-info-container">
                                 <Label class="owe-title" text="Niveau 1"> </Label>
-                                <GridLayout columns="auto,auto,auto" rows="auto" width="100%">
-                                    <Label text="Brian" row="0" col="0" class="debtor-name"></Label>
-                                    <Label text=" owes You : " row="0" col="1"></Label>
-                                    <Label text="Rp 130.000" class="owed-ammount" row="0" col="2">
-                                    </Label>
-                                </GridLayout>
-                                <GridLayout columns="auto,auto,auto" rows="auto" width="100%">
-                                    <Label text="Rick" row="0" col="0" class="debtor-name"></Label>
-                                    <Label text=" owes You : " row="0" col="1"></Label>
-                                    <Label text="Rp 130.000" class="owed-ammount" row="0" col="2">
-                                    </Label>
-                                </GridLayout>
+                                <GridLayout columns="*" rows="auto, auto" height="55" width="100%" >
+                                     <Label
+                                     textWrap="true"
+                                     text="Très facil, moins de 2h de march. Ideale à faire en famille sur des chemins bien tracés."
+                                     row="0" col="0"
+                                     class="debtor-name"
+                                     style="text-align: left;"
+                                     ></Label>
+>                                </GridLayout>
                             </StackLayout>
-                            <Label verticalAlignment="top" row="0" col="2" text="Rp 390.000" class="pay-amount"></Label>
-                        </GridLayout>
-                        <GridLayout columns="auto, *, auto" rows="auto" width="100%" height="auto"
-                            class="owe-secondary-info">
-                            <Label row="0" col="0" text="23 Oct" class="time-information"></Label>
-                            <GridLayout row="0" col="2" columns="auto, auto" rows="auto">
-                                <Label row="0" col="0" text="You paid for "> </Label>
-                                <GridLayout row="0" col="1" columns="auto,auto,auto" rows="auto" width="100%"
-                                    class="debtor-list">
-                                    <StackLayout row="0" col="0" orientation="vertical" class="debtor-list-item">
-                                        <Image src="~/Assets/brian.png" class="debtor-list-item-image">
-                                        </Image>
-                                    </StackLayout>
-                                    <StackLayout row="0" col="1" orientation="vertical" class="debtor-list-item">
-                                        <Image src="~/Assets/rick.png" class="debtor-list-item-image">
-                                        </Image>
-                                    </StackLayout>
-                                    <StackLayout row="0" col="2" orientation="vertical" class="debtor-list-item">
-                                        <Image src="~/Assets/me.png" class="debtor-list-item-image">
-                                        </Image>
-                                    </StackLayout>
-                                </GridLayout>
-                            </GridLayout>
-                        </GridLayout>
-                        <Label class="divider" text=""></Label>
-                    </StackLayout>
-                    <StackLayout id="item6" orientation="vertical" class="owe-list-item" width="100%">
-                        <GridLayout columns="auto, *, auto" rows="auto" width="100%" height="auto"
-                            class="owe-main-info">
-                            <Image row="0" col="0" src="~/Assets/transportation-category.png" class="owe-category-icon"
-                                verticalAlignment="top"></Image>
-                            <StackLayout row="0" col="1" orientation="vertical" class="owe-info-container">
-                                <Label class="owe-title" text="item6"> </Label>
-                                <GridLayout columns="auto,auto" rows="auto" width="100%">
-                                    <Label text="All settle up" row="0" col="0"></Label>
-                                    <Image row="0" col="1" src="~/Assets/settle-up-icon.png" class="settle-up-icon">
-                                    </Image>
-                                </GridLayout>
-                            </StackLayout>
-                            <Label verticalAlignment="top" row="0" col="2" text="Rp 124.000" class="pay-amount"></Label>
-                        </GridLayout>
-                        <GridLayout columns="auto, *, auto" rows="auto" width="100%" height="auto"
-                            class="owe-secondary-info">
-                            <Label row="0" col="0" text="" class="time-information"></Label>
-                            <GridLayout row="0" col="2" columns="auto, auto, auto" rows="auto">
-                                <Label row="0" col="0" text="Yura" class="lender-name"></Label>
-                                <Label row="0" col="1" text=" paid for "> </Label>
-                                <GridLayout row="0" col="2" columns="auto,auto" rows="auto" width="100%"
-                                    class="debtor-list">
-                                    <StackLayout row="0" col="0" orientation="vertical" class="debtor-list-item">
-                                        <Image row="0" col="0" src="~/Assets/yura.png" class="debtor-list-item-image">
-                                        </Image>
-                                    </StackLayout>
-                                    <StackLayout row="0" col="1" orientation="vertical" class="debtor-list-item">
-                                        <Image row="0" col="0" src="~/Assets/me.png" class="debtor-list-item-image">
-                                        </Image>
-                                    </StackLayout>
-                                </GridLayout>
-                            </GridLayout>
                         </GridLayout>
                         <Label class="divider" text=""></Label>
                     </StackLayout>
 
-                     <!-- TO CREATE ITEMS 7 -8   AND SHOW BY ITEM -->
+                    <StackLayout id="item6" orientation="vertical" class="owe-list-item" width="100%">
+                        <GridLayout columns="auto, *, auto" rows="auto" width="100%" height="auto"
+                            class="owe-main-info">
+                            <Label row="0" col="0" text="B" class="owe-category-icon niv icon-level" backgroundColor="blue"
+                                verticalAlignment="top" ></Label>
+                                <StackLayout row="0" col="1" orientation="vertical" class="owe-info-container">
+                                    <Label class="owe-title" text="Niveau 2"> </Label>
+                                    <GridLayout columns="*" rows="auto, auto, auto" height="auto" width="100%" >
+                                         <Label
+                                         textWrap="true"
+                                         text="Facile, moins de 3h de marche. Peut être faite en famille, sur des chemins avec quelquefois des passages moins faciles."
+                                         row="0" col="0"
+                                         class="debtor-name"
+                                         style="text-align: left;"
+                                         ></Label>
+    >                                </GridLayout>
+                                </StackLayout>
+                            </GridLayout>
+                            <Label class="divider" text=""></Label>
+                    </StackLayout>
+
+
                     <StackLayout id="item7" orientation="vertical" class="owe-list-item" width="100%">
                         <GridLayout columns="auto, *, auto" rows="auto" width="100%" height="auto"
                             class="owe-main-info">
-                            <Image row="0" col="0" src="~/Assets/food-and-beverage-category.png"
-                                class="owe-category-icon" verticalAlignment="top"></Image>
-                            <StackLayout row="0" col="1" orientation="vertical" class="owe-info-container">
-                                <Label class="owe-title" text="item 7"> </Label>
-                                <GridLayout columns="auto,auto,auto,auto" rows="auto" width="100%">
-                                    <Label text="You owe " row="0" col="0"> </Label>
-                                    <Label text="Yura" class="lender-name" row="0" col="1"></Label>
-                                    <Label text=" : " row="0" col="2"></Label>
-                                    <Label text="Rp 23.230" class="owe-ammount" row="0" col="3">
-                                    </Label>
-                                </GridLayout>
-                            </StackLayout>
-                            <Label verticalAlignment="top" row="0" col="2" text="Rp 54.540" class="pay-amount"></Label>
-                        </GridLayout>
-                        <GridLayout columns="auto, *, auto" rows="auto" width="100%" height="auto"
-                            class="owe-secondary-info">
-                            <Label row="0" col="0" text="23 Oct" class="time-information"></Label>
-                            <GridLayout row="0" col="2" columns="auto, auto, auto" rows="auto">
-                                <Label row="0" col="0" text="Yura" class="lender-name"></Label>
-                                <Label row="0" col="1" text=" paid for "> </Label>
-                                <GridLayout row="0" col="2" columns="auto,auto" rows="auto" width="100%"
-                                    class="debtor-list">
-                                    <StackLayout row="0" col="0" orientation="vertical" class="debtor-list-item">
-                                        <Image row="0" col="0" src="~/Assets/me.png" class="debtor-list-item-image">
-                                        </Image>
-                                    </StackLayout>
-                                    <StackLayout row="0" col="1" orientation="vertical" class="debtor-list-item">
-                                        <Image row="0" col="0" src="~/Assets/yura.png" class="debtor-list-item-image">
-                                        </Image>
-                                    </StackLayout>
-                                </GridLayout>
+                           <Label row="0" col="0" text="C" class="owe-category-icon niv icon-level" backgroundColor="red"
+                                verticalAlignment="top" ></Label>
+                                <StackLayout row="0" col="1" orientation="vertical" class="owe-info-container">
+                                    <Label class="owe-title" text="Niveau 3"> </Label>
+                                    <GridLayout columns="*" rows="auto, auto, auto" height="auto" width="100%" >
+                                         <Label
+                                         textWrap="true"
+                                         text="Difficile, moins de 4h de marche. Pour randonneur habitué à la marche, avec quelquefois des endroits assez sportifs ou des dénivelés."
+                                         row="0" col="0"
+                                         class="debtor-name"
+                                         style="text-align: left;"
+                                         ></Label>
+    >                                </GridLayout>
+                                </StackLayout>
                             </GridLayout>
-                        </GridLayout>
-                        <Label class="divider" text=""></Label>
+                            <Label class="divider" text=""></Label>
                     </StackLayout>
 
                     <StackLayout id="item8" orientation="vertical" class="owe-list-item" width="100%">
                         <GridLayout columns="auto, *, auto" rows="auto" width="100%" height="auto"
                             class="owe-main-info">
+                            <Label row="0" col="0" text="D" class="owe-category-icon niv icon-level" backgroundColor="#000"
+                            verticalAlignment="top" ></Label>
+                            <StackLayout row="0" col="1" orientation="vertical" class="owe-info-container">
+                                <Label class="owe-title" text="Niveau 4"> </Label>
+                                <GridLayout columns="*" rows="auto, auto, auto" height="45" width="100%" >
+                                     <Label
+                                     textWrap="true"
+                                     text="Très difficile, plus de 4h de marche. Pour randonneur expérimenté et sportif. L’itinéraire peut-être long et technique (dénivelé, passages délicats)."
+                                     row="0" col="0"
+                                     class="debtor-name"
+                                     style="text-align: left;"
+                                     ></Label>
+>                                </GridLayout>
+                            </StackLayout>
+                        </GridLayout>
+                        <Label class="divider" text=""></Label>
+                    </StackLayout>
+
+
+
+
+                    <StackLayout id="item9" orientation="vertical" class="owe-list-item" width="100%">
+                        <GridLayout columns="auto, *, auto" rows="auto" width="100%" height="auto"
+                            class="owe-main-info">
                             <Image row="0" col="0" src="~/Assets/food-and-beverage-category.png"
                                 class="owe-category-icon" verticalAlignment="top"></Image>
                             <StackLayout row="0" col="1" orientation="vertical" class="owe-info-container">
-                                <Label class="owe-title" text="item 8"> </Label>
+                                <Label class="owe-title" text="Météo 08 99 71 02 64 -"> </Label>
                                 <GridLayout columns="auto,auto,auto,auto" rows="auto" width="100%">
-                                    <Label text="You owe " row="0" col="0"> </Label>
-                                    <Label text="Yura" class="lender-name" row="0" col="1"></Label>
-                                    <Label text=" : " row="0" col="2"></Label>
-                                    <Label text="Rp 23.230" class="owe-ammount" row="0" col="3">
-                                    </Label>
+
+
                                 </GridLayout>
                             </StackLayout>
-                            <Label verticalAlignment="top" row="0" col="2" text="Rp 54.540" class="pay-amount"></Label>
+
                         </GridLayout>
                         <GridLayout columns="auto, *, auto" rows="auto" width="100%" height="auto"
                             class="owe-secondary-info">
-                            <Label row="0" col="0" text="23 Oct" class="time-information"></Label>
+                            <Label row="0" col="0" text="recommandations" class="time-information"></Label>
                             <GridLayout row="0" col="2" columns="auto, auto, auto" rows="auto">
-                                <Label row="0" col="0" text="Yura" class="lender-name"></Label>
-                                <Label row="0" col="1" text=" paid for "> </Label>
+                                <Label row="0" col="0" text="...." class="lender-name"></Label>
+                                <Label row="0" col="1" text=" ...... "> </Label>
                                 <GridLayout row="0" col="2" columns="auto,auto" rows="auto" width="100%"
                                     class="debtor-list">
-                                    <StackLayout row="0" col="0" orientation="vertical" class="debtor-list-item">
-                                        <Image row="0" col="0" src="~/Assets/me.png" class="debtor-list-item-image">
-                                        </Image>
-                                    </StackLayout>
-                                    <StackLayout row="0" col="1" orientation="vertical" class="debtor-list-item">
-                                        <Image row="0" col="0" src="~/Assets/yura.png" class="debtor-list-item-image">
-                                        </Image>
-                                    </StackLayout>
+
+
                                 </GridLayout>
                             </GridLayout>
                         </GridLayout>
                         <Label class="divider" text=""></Label>
                     </StackLayout>
+
+
+
+                    <StackLayout id="item10" orientation="vertical" class="owe-list-item" width="100%">
+                        <GridLayout columns="auto, *, auto" rows="auto" width="100%" height="auto"
+                            class="owe-main-info">
+                            <Image row="0" col="0" src="~/Assets/food-and-beverage-category.png"
+                                class="owe-category-icon" verticalAlignment="top"></Image>
+                            <StackLayout row="0" col="1" orientation="vertical" class="owe-info-container">
+                                <Label class="owe-title" text="Appel d’urgence européen"> </Label>
+                                <GridLayout columns="auto,auto,auto,auto" rows="auto" width="100%">
+
+
+                                </GridLayout>
+                            </StackLayout>
+
+                        </GridLayout>
+                        <GridLayout columns="auto, *, auto" rows="auto" width="100%" height="auto"
+                            class="owe-secondary-info">
+                            <Label row="0" col="0" text="recommandations" class="time-information"></Label>
+                            <GridLayout row="0" col="2" columns="auto, auto, auto" rows="auto">
+                                <Label row="0" col="0" text="...." class="lender-name"></Label>
+                                <Label row="0" col="1" text=" ...... "> </Label>
+                                <GridLayout row="0" col="2" columns="auto,auto" rows="auto" width="100%"
+                                    class="debtor-list">
+
+
+                                </GridLayout>
+                            </GridLayout>
+                        </GridLayout>
+                        <Label class="divider" text=""></Label>
+                    </StackLayout>
+
+
                 </FlexboxLayout>
             </ScrollView>
         </StackLayout>

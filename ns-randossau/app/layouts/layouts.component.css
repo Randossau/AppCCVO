@@ -4,7 +4,7 @@
     font-weight: normal;
     font-style: normal;
 }
-[class*='icon-']:before{
+/* [class*='icon-']:before{
 	display: inline-block;
    font-family: 'Glyphter';
    font-style: normal;
@@ -13,7 +13,7 @@
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale
 }
-.icon-nav:before{content:'\0041';}
+.icon-nav:before{content:'\0041';} */
 
 
 .home-panel{
