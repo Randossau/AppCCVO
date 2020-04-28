@@ -40,26 +40,30 @@ html {
 }
 
 .profile-container {
-    background-color: #77aa00;
-    padding: 30 20 60 0;
+    background-color: #171831;
+    padding: 20 20 50 0;
+    padding-left: 15;
 }
 
 .profile-photo-container {
     border-width: 1.5;
     border-color: #fff;
     border-radius: 50%;
-    padding: 5;
+    padding: 0;
+
     box-sizing: border-box;
 }
 
-.profile-information-container {
+.title-container {
     color: #fff;
-    padding: 0 20;
+    padding: 0 50;
+    text-align: center;
+    vertical-align: center;
+
 }
 
 .page-title {
-    margin-bottom: 5;
-    margin-left: 14;
+    text-align: center;
     font-size: 26;
 }
 
@@ -73,7 +77,7 @@ html {
     padding: 10 10 15;
     margin: 0 6;
     border-width: 2;
-    border-color: #77aa00;
+    border-color: #171831;
     border-radius: 3;
     display: flex;
     justify-content: center;
@@ -81,7 +85,12 @@ html {
 }
 
 .owe-dashboard-item.active {
-    border-color: #171831;
+    border-color: #77aa00;
+    background: #77aa00;
+}
+
+.owe-dashboard-item.active .dashboard-title__text{
+    color: #fff;
 }
 
 .dashboard__indicator {
@@ -91,7 +100,7 @@ html {
 }
 
 .dashboard-title__text {
-    margin-top: 5;
+    margin-top: 1;
     font-size: 18;
 }
 
@@ -131,6 +140,12 @@ html {
     margin-right: 15;
 }
 
+.niv {
+    width: 65;
+    height: 55;
+    margin-left: 10;
+}
+
 .owe-info-container {
     color: #acacac;
     font-size: 13;
@@ -140,7 +155,7 @@ html {
     font-weight: 600;
     margin-bottom: 5;
     color: #000;
-    font-size: 15;
+    font-size: 16;
 }
 
 .lender-name,
@@ -148,6 +163,7 @@ html {
     font-weight: 600;
     color: #8f91de;
     text-align: center;
+    font-size: 14;
 }
 
 .owe-ammount {
@@ -375,21 +391,6 @@ html {
     margin: 0 0 15;
 }
 
-.bottom-drawer-content {
-    background-color: #fff;
-    padding: 0 20 20;
-}
-
-.category-drawer-item {
-    margin: 8 0;
-}
-
-.category-drawer__title {
-    font-size: 18;
-    font-weight: 700;
-    margin-bottom: 10;
-}
-
 .suggestion-item {
     border-width: 1;
     border-color: #b8b8b8;
@@ -403,18 +404,7 @@ html {
     border-color: #bf97df;
 }
 
-.sidedrawer-left {
+ScrollView {
+    padding-bottom: 100;
     background-color: #fff;
-}
-
-.sidedrawer-content {
-    margin-top: 40;
-}
-
-.sidedrawer-list-item-text {
-    padding: 20;
-    color: #000;
-    border-width: 1;
-    border-color: #bf97df;
-    margin-bottom: -1;
 }

@@ -66,9 +66,9 @@ export class RecommandationsComponent implements OnInit {
             this.item2.className = "owe-list-item hide";
             this.item3.className = "owe-list-item hide";
             this.item4.className = "owe-list-item hide";
-            this.item5.className = "owe-list-item hide";
+            this.item5.className = "owe-list-item";
             this.item6.className = "owe-list-item";
-            this.item7.className = "owe-list-item";
+            this.item7.className = "owe-list-item hide";
             this.item8.className = "owe-list-item hide";
         } else if (args.object.category == "recom") {
             this.category1.className = "owe-dashboard-item";
@@ -79,9 +79,9 @@ export class RecommandationsComponent implements OnInit {
             this.item3.className = "owe-list-item hide";
             this.item4.className = "owe-list-item hide";
             this.item5.className = "owe-list-item hide";
-            this.item6.className = "owe-list-item";
+            this.item6.className = "owe-list-item hide";
             this.item7.className = "owe-list-item";
-            this.item8.className = "owe-list-item hide";
+            this.item8.className = "owe-list-item";
 
         }
     }
