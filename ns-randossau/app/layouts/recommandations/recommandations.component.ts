@@ -23,6 +23,8 @@ export class RecommandationsComponent implements OnInit {
     item6: any;
     item7: any;
     item8: any;
+    item9: any;
+    item10: any;
 
     constructor(private page: Page, private routerExtensions: RouterExtensions) {
 
@@ -38,11 +40,14 @@ export class RecommandationsComponent implements OnInit {
             this.item6 = this.page.getViewById("item6");
             this.item7 = this.page.getViewById("item7");
             this.item8 = this.page.getViewById("item8");
+            this.item9 = this.page.getViewById("item9");
+            this.item10 = this.page.getViewById("item10");
             this.page.getViewById("addButtonContainer").top = screen.mainScreen.heightDIPs - 120;
         });
     }
 
     ngOnInit(): void {
+        this.page.actionBarHidden = true;
     }
 
     onTouch(args): void {
@@ -58,6 +63,8 @@ export class RecommandationsComponent implements OnInit {
             this.item6.className = "owe-list-item hide";
             this.item7.className = "owe-list-item hide";
             this.item8.className = "owe-list-item hide";
+            this.item9.className = "owe-list-item hide";
+            this.item10.className = "owe-list-item hide";
         } else if (args.object.category == "niveau") {
             this.category1.className = "owe-dashboard-item";
             this.category2.className = "owe-dashboard-item active";
@@ -66,10 +73,12 @@ export class RecommandationsComponent implements OnInit {
             this.item2.className = "owe-list-item hide";
             this.item3.className = "owe-list-item hide";
             this.item4.className = "owe-list-item hide";
-            this.item5.className = "owe-list-item hide";
+            this.item5.className = "owe-list-item";
             this.item6.className = "owe-list-item";
             this.item7.className = "owe-list-item";
-            this.item8.className = "owe-list-item hide";
+            this.item8.className = "owe-list-item";
+            this.item9.className = "owe-list-item hide";
+            this.item10.className = "owe-list-item hide";
         } else if (args.object.category == "recom") {
             this.category1.className = "owe-dashboard-item";
             this.category2.className = "owe-dashboard-item";
@@ -79,9 +88,11 @@ export class RecommandationsComponent implements OnInit {
             this.item3.className = "owe-list-item hide";
             this.item4.className = "owe-list-item hide";
             this.item5.className = "owe-list-item hide";
-            this.item6.className = "owe-list-item";
-            this.item7.className = "owe-list-item";
+            this.item6.className = "owe-list-item hide";
+            this.item7.className = "owe-list-item hide";
             this.item8.className = "owe-list-item hide";
+            this.item9.className = "owe-list-item";
+            this.item10.className = "owe-list-item";
 
         }
     }
