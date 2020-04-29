@@ -1,13 +1,12 @@
-<!-- TODO Title in the action bar
-     FIX Action bar icon size
-     FIX Bottom navigation circle cutout -->
+<!-- TO FIX Action bar icon size
+     TO FIX Bottom navigation circle cutout
+     TO FIX Bottom navigation landscape -->
+<ActionBar class="action-bar" backgroundColor="#171831" color= "#d0d0d0">
+    <Label  color="#d0d0d0" horizontalAlignment="left"
 
-<ActionBar class="action-bar" backgroundColor="#171831", color= "#d0d0d0">
-    <!-- <Label
-    *ngFor="let item of tabList"
-    [text]="item.title" color="white" horizontalAlignment="left"
+    [text]="tabList[currentTabIndex].title"
         >
-    </Label> -->
+    </Label>
 
 
     <!-- <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap"></NavigationButton> -->
@@ -18,6 +17,7 @@
         <!-- <img src="~/assets/img/icons8-settings-50.png" width="30"/> -->
     </ActionItem>
   </ActionBar>
+
 
 
 <!-- </BottomNavigation> -->
@@ -73,7 +73,7 @@
                     [backgroundColor]="tabList[currentTabIndex].backgroundColor" borderRadius="50"
                     verticalAlignment="bottom" marginBottom="10">
                     <GridLayout verticalAlignment="center" horizontalAlignment="center" height="90" width="90"
-                        [backgroundColor]="tabContainer.focusColor" borderRadius="45"></GridLayout>
+                        [backgroundColor]="tabList[currentTabIndex].focusColor" borderRadius="45"></GridLayout>
                 </GridLayout>
 
             </GridLayout>
@@ -94,3 +94,4 @@
     </GridLayout>
 
 </GridLayout>
+

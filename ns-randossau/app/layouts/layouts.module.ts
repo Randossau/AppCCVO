@@ -1,4 +1,4 @@
-import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { NgModule, NgModuleFactoryLoader, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NativeScriptCommonModule } from 'nativescript-angular/common';
 import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angular";
 import { NativeScriptUIListViewModule } from "nativescript-ui-listview/angular";
@@ -9,6 +9,7 @@ import { NativeScriptUIAutoCompleteTextViewModule } from "nativescript-ui-autoco
 import { NativeScriptUIGaugeModule } from "nativescript-ui-gauge/angular";
 import { NativeScriptFormsModule } from 'nativescript-angular/forms';
 
+
 import { LayoutsRoutingModule } from './layouts-routing.module';
 import { LayoutsComponent } from './layouts.component';
 import { GpsComponent } from './gps/gps.component';
@@ -18,6 +19,9 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { RecommandationsComponent } from './recommandations/recommandations.component';
 import { SettingsComponent } from './settings/settings.component';
 import { SettingsRootComponent } from './settings/settings-root.component';
+import { AnimationsService } from './parcours/circuits/animations-service';
+import { LandmarksService } from './parcours/circuits/landmarks-service';
+import { DialogComponent } from './incidents/dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -28,11 +32,13 @@ import { SettingsRootComponent } from './settings/settings-root.component';
     AccueilComponent,
     RecommandationsComponent,
     SettingsComponent,
-    SettingsRootComponent
+    SettingsRootComponent,
+    DialogComponent
   ],
 
   entryComponents: [
-    SettingsRootComponent
+    SettingsRootComponent,
+    DialogComponent
 ],
 
   imports: [
@@ -44,11 +50,16 @@ import { SettingsRootComponent } from './settings/settings-root.component';
     NativeScriptUIAutoCompleteTextViewModule,
     NativeScriptUIGaugeModule,NativeScriptCommonModule,
     LayoutsRoutingModule,
-    NativeScriptFormsModule
+    NativeScriptFormsModule,
+
   ],
 
   schemas: [
     NO_ERRORS_SCHEMA
+  ],
+  providers: [
+      AnimationsService,
+      LandmarksService
   ]
 
 })
