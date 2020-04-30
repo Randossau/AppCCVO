@@ -1,7 +1,7 @@
 import { Component, ViewChild, ElementRef, OnInit } from "@angular/core";
 import { PlatformLocation } from '@angular/common';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Landmark } from "./circuits/landmark";
+import { ParcoursI } from "./circuits/parcoursI.model";
 import { RouterExtensions } from "nativescript-angular/router";
 import { View } from "tns-core-modules/ui/core/view";
 import { Page } from "tns-core-modules/ui/page";
@@ -10,9 +10,9 @@ import { topmost } from "tns-core-modules/ui/frame";
 import { Color } from "color";
 import { android, ios } from "application";
 import { device } from "platform";
-import { LandmarksService } from "./circuits/landmarks-service";
 import { AnimationsService } from "./circuits/animations-service";
-import { ActionButtonComponent } from "./action-button/action-button.component";
+import { ParcoursServService } from "./circuits/parcoursServ-service";
+import { ListViewEventData } from "nativescript-ui-listview";
 
 @Component({
   selector: 'Parcours',
@@ -23,32 +23,33 @@ import { ActionButtonComponent } from "./action-button/action-button.component";
 export class ParcoursComponent implements OnInit {
 
 
-    private _landmarks: Landmark[];
+    private _landmarks: ParcoursI[];
     private _selectedView: View;
     private _adjustedOffset: number = 0;
 
-    @ViewChild("actionButton", {static: true}) _buttonRef: ActionButtonComponent;
+
     @ViewChild("search", {static: true}) _searchRef: ElementRef;
     @ViewChild("list", {static: true}) _listRef: ElementRef;
     @ViewChild("animatingImage",{static: true}) _imageRef: ElementRef;
     @ViewChild("animatingImageContainer", {static: true}) _imageContainerRef: ElementRef;
 
     constructor(private animationsService: AnimationsService,
-        private landmarksService: LandmarksService,
+        private parcoursServService: ParcoursServService,
         private routerExtensions: RouterExtensions,
         private page: Page,
         private location: PlatformLocation) {
 
             this.page['scrollableContent'] = true;
-            this._landmarks = this.landmarksService.getLandmarks();
+            this._landmarks = this.parcoursServService.getLandmarks();
 
             if (android) {
                 this._updateStatusBarColor("#2B3238");
             }
     }
 
-    onGPSTap(){
-        this.routerExtensions.navigate(["app/layouts/gps"],
+    onGPSTap(args: any){
+        const gpsTapped =  args.view;
+        this.routerExtensions.navigate(["app/layouts/gps", gpsTapped.id],
             {
                 animated: false,
                 transition: {
@@ -73,13 +74,15 @@ export class ParcoursComponent implements OnInit {
 
     get landmarks() {
         return this._landmarks;
+
     }
 
+
     public onNavigationItemTap(args: any) {
-        this.landmarksService.setSelectedId(args.index);
+        this.parcoursServService.setSelectedId(args.id);
         this._selectedView = args.view;
         this.animationsService.animationOffset = this.measureOffset(args.view, args.object);
-        this.routerExtensions.navigate(['/gps'], { animated: false });
+        this.routerExtensions.navigate(['/details'], { animated: false });
         setTimeout(() => {
             this._prepareForBackNavigation();
         });
@@ -97,12 +100,10 @@ export class ParcoursComponent implements OnInit {
         this._listRef.nativeElement.opacity = 0;
         this._selectedView.opacity = 0;
 
-        this._imageRef.nativeElement.src = this.landmarksService.getSelected().image;
+        this._imageRef.nativeElement.src = this.parcoursServService.getSelected().image;
         this._imageContainerRef.nativeElement.translateY = this._adjustedOffset;
         this._imageContainerRef.nativeElement.opacity = 1;
 
-        this._buttonRef.makeArrow();
-        this._searchRef.nativeElement.opacity = 0;
     }
 
     private _onNavigatedTo() {

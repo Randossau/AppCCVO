@@ -19,7 +19,11 @@ import { RecommandationsComponent } from './recommandations/recommandations.comp
 import { SettingsComponent } from './settings/settings.component';
 import { SettingsRootComponent } from './settings/settings-root.component';
 import { AnimationsService } from './parcours/circuits/animations-service';
-import { LandmarksService } from './parcours/circuits/landmarks-service';
+import { ParcoursServService } from './parcours/circuits/parcoursServ-service';
+import { DetailsRoutingModule } from './parcours/details/details-routing.module';
+import { DetailsComponent } from './parcours/details/details.component';
+
+
 
 @NgModule({
   declarations: [
@@ -30,7 +34,8 @@ import { LandmarksService } from './parcours/circuits/landmarks-service';
     AccueilComponent,
     RecommandationsComponent,
     SettingsComponent,
-    SettingsRootComponent
+    SettingsRootComponent,
+    DetailsComponent,
   ],
 
   entryComponents: [
@@ -46,6 +51,7 @@ import { LandmarksService } from './parcours/circuits/landmarks-service';
     NativeScriptUIAutoCompleteTextViewModule,
     NativeScriptUIGaugeModule,NativeScriptCommonModule,
     LayoutsRoutingModule,
+    DetailsRoutingModule,
     NativeScriptFormsModule
   ],
 
@@ -54,7 +60,7 @@ import { LandmarksService } from './parcours/circuits/landmarks-service';
   ],
   providers: [
       AnimationsService,
-      LandmarksService
+      ParcoursServService
   ]
 
 })

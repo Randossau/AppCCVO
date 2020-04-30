@@ -16,12 +16,12 @@
 </ActionBar>
 
 <GridLayout height="100%">
-  <!-- <ListView #list [items]="landmarks" (itemTap)="onNavigationItemTap($event)"> -->
-  <ListView #list [items]="landmarks">
+  <ListView #list [items]="landmarks" (itemTap)="onNavigationItemTap($event)">
+  <!-- <ListView #list [items]="landmarks" > -->
     <ng-template let-item="item">
       <GridLayout class="list-item">
           <!-- THE BACKGROUND -->
-        <Image [src]="item.image" width="100%" stretch="aspectFill" class="item-image"></Image>
+        <Image [src]="item.image" width="100%" stretch="aspectFill" class="item-image" ></Image>
          <!-- THE Text - title -->
          <GridLayout width="500" height="50"  columns="4*, *" verticalAlignment="top">
              <Label [text]="item.name" class="item-title" col="0"></Label>

@@ -5,8 +5,8 @@ import { AnimationCurve } from "tns-core-modules/ui/enums";
 import { GestureEventData } from "tns-core-modules/ui/gestures";
 import { ScrollEventData } from "tns-core-modules/ui/scroll-view";
 import { screen } from "tns-core-modules/platform";
-import { Landmark } from "../circuits/landmark";
-import { LandmarksService } from "../circuits/landmarks-service";
+import { ParcoursI } from "../circuits/parcoursI.model";
+import { ParcoursServService } from "../circuits/parcoursServ-service";
 import { AnimationsService } from "../circuits/animations-service";
 
 @Component({
@@ -16,7 +16,7 @@ import { AnimationsService } from "../circuits/animations-service";
 	styleUrls: ['./details.component.css']
 })
 export class DetailsComponent {
-	@Input() landmark: Landmark;
+	@Input() landmark: ParcoursI;
 	@Input() offset: number;
 	@Input() imageOpacity: number = 1;
 	@Input() dockedLabelOpacity: number = 0;
@@ -27,11 +27,11 @@ export class DetailsComponent {
 	static IMAGE_MIN_HEIGHT = 48;
 
 	constructor(private animationsService: AnimationsService,
-		private landmarksService: LandmarksService,
+		private parcoursServService: ParcoursServService,
 		private routerExtensions: RouterExtensions) {
 
 		this.offset = this.animationsService.animationOffset;
-		this.landmark = this.landmarksService.getSelected();
+		this.landmark = this.parcoursServService.getSelected();
 	}
 
 	get minHeight() {

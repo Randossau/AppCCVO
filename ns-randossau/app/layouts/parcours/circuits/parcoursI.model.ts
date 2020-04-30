@@ -1,4 +1,4 @@
-export class Landmark {
+export class ParcoursI {
     id: number;
     name: string;
     description: string;

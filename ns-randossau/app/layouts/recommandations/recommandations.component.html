@@ -1,132 +1,3 @@
-<!-- <GridLayout class="page" [class.dialogOpen]="dialogOpen">
-    <GridLayout class="content">
-      <StackLayout>
-        <Button class="btn btn-primary" text="Niveau" (tap)="showDialog()"></Button>
-      </StackLayout>
-    </GridLayout>
-
-    <AbsoluteLayout class="dialog-wrapper">
-      <StackLayout class="dialog">
-
-            <GridLayout rows="*, *, *, *" columns="*, auto" height="200" width="80%">
-                <FlexboxLayout row="0" flexDirection="row" verticalAlignment="top"
-                    col="0">
-                    <Image
-                        src="https://play.nativescript.org/dist/assets/img/NativeScript_logo.png">
-                    </Image>
-                    <TextView editable="false" textWrap="true" color="white"
-                        height="25%">
-                        <FormattedString>
-                            <Span
-                                text="This is a text view that uses attributed text. You can use text attributes such as ">
-                            </Span>
-                            <Span text="bold, " fontWeight="Bold"></Span>
-                            <Span text="italic " fontStyle="Italic"></Span>
-                            <Span text="and "></Span>
-                            <Span text="underline." textDecoration="Underline"></Span>
-                            <Span
-                                text="This is a text view that uses attributed text. You can use text attributes such as ">
-                            </Span>
-                            <Span
-                                text="This is a text view that uses attributed text. You can use text attributes such as ">
-                            </Span>
-                            <Span
-                                text="This is a text view that uses attributed text. You can use text attributes such as ">
-                            </Span>
-                        </FormattedString>
-                    </TextView>
-                </FlexboxLayout>
-
-                <FlexboxLayout row="1" flexDirection="row" verticalAlignment="center" backgroundColor="green"
-                    col="0">
-                    <Image
-                        src="https://play.nativescript.org/dist/assets/img/NativeScript_logo.png">
-                    </Image>
-                    <TextView editable="false" textWrap="false" color="white"
-                        height="40">
-                        <FormattedString>
-                            <Span
-                                text="This is a text view that uses attributed text. You can use text attributes such as ">
-                            </Span>
-                            <Span text="bold, " fontWeight="Bold"></Span>
-                            <Span text="italic " fontStyle="Italic"></Span>
-                            <Span text="and "></Span>
-                            <Span text="underline." textDecoration="Underline"></Span>
-                            <Span
-                                text="This is a text view that uses attributed text. You can use text attributes such as ">
-                            </Span>
-                            <Span
-                                text="This is a text view that uses attributed text. You can use text attributes such as ">
-                            </Span>
-                            <Span
-                                text="This is a text view that uses attributed text. You can use text attributes such as ">
-                            </Span>
-                        </FormattedString>
-                    </TextView>
-                </FlexboxLayout>
-
-                <FlexboxLayout row="2" flexDirection="row" verticalAlignment="center"
-                    col="0">
-                    <Image
-                        src="https://play.nativescript.org/dist/assets/img/NativeScript_logo.png">
-                    </Image>
-                    <TextView editable="false"  textWrap="true" color="white"
-                        height="40">
-                        <FormattedString>
-                            <Span
-                                text="This is a text view that uses attributed text. You can use text attributes such as ">
-                            </Span>
-                            <Span text="bold, " fontWeight="Bold"></Span>
-                            <Span text="italic " fontStyle="Italic"></Span>
-                            <Span text="and "></Span>
-                            <Span text="underline." textDecoration="Underline"></Span>
-                            <Span
-                                text="This is a text view that uses attributed text. You can use text attributes such as ">
-                            </Span>
-                            <Span
-                                text="This is a text view that uses attributed text. You can use text attributes such as ">
-                            </Span>
-                            <Span
-                                text="This is a text view that uses attributed text. You can use text attributes such as ">
-                            </Span>
-                        </FormattedString>
-                    </TextView>
-                </FlexboxLayout>
-
-                <FlexboxLayout row="3" flexDirection="row" verticalAlignment="center"
-                    col="0">
-                    <Image
-                        src="https://play.nativescript.org/dist/assets/img/NativeScript_logo.png">
-                    </Image>
-                    <TextView editable="false" backgroundColor="red" color="white" textWrap="true"
-                        height="40">
-                        <FormattedString>
-                            <Span
-                                text="This is a text view that uses attributed text. You can use text attributes such as ">
-                            </Span>
-                            <Span text="bold, " fontWeight="Bold"></Span>
-                            <Span text="italic " fontStyle="Italic"></Span>
-                            <Span text="and "></Span>
-                            <Span text="underline." textDecoration="Underline"></Span>
-                            <Span
-                                text="This is a text view that uses attributed text. You can use text attributes such as ">
-                            </Span>
-                            <Span
-                                text="This is a text view that uses attributed text. You can use text attributes such as ">
-                            </Span>
-                            <Span
-                                text="This is a text view that uses attributed text. You can use text attributes such as ">
-                            </Span>
-                        </FormattedString>
-                    </TextView>
-                </FlexboxLayout>
-            </GridLayout>
-        </StackLayout>
-        <Button class="btn" text="Fermer" (tap)="closeDialog()"></Button>
-    </AbsoluteLayout>
-  </GridLayout>
- -->
-
 <GridLayout rows="*" height="2000px">
     <StackLayout tkDrawerContent class="sidedrawer-left">
         <StackLayout class="sidedrawer-content">
@@ -140,16 +11,16 @@
 
     <AbsoluteLayout tkMainContent width="100%" height="100%" backgroundColor="#e8e7e7">
         <StackLayout top="0" left="0" width="100%" height="100%">
-            <GridLayout columns="auto, auto , auto" row="auto" width="100%" height="auto" class="profile-container"
+            <GridLayout columns="*,3*" row="auto" width="auto" height="auto" class="logo-container"
                 verticalAlignment="middle">
-                <StackLayout row="0" col="1" orientation="vertical" width="80"
-                 height="80" class="profile-photo-container">
-                    <Image src="~/assets/img/logo.png" class="profile__photo"></Image>
+                <StackLayout row="0" col="0" orientation="vertical" horizontalAlignment="left" class="ccvo-photo-container">
+                    <Image src="~/assets/img/logo.png"></Image>
                  </StackLayout>
-                <StackLayout row="0" col="2" height="80" orientation="vertical" horizontalAlignment="center"
+                <StackLayout row="0" col="1" orientation="vertical" horizontalAlignment="center"
                     class="title-container">
                     <Label text="Les Recommandations" class="page-title"></Label>
-                    <Label text="de la CCVO" class="page-title"></Label>
+                    <Label text=" de la Fédération Française" class="page-title"></Label>
+                    <Label text="de Randonnée Pédestre" class="page-title"></Label>
                 </StackLayout>
             </GridLayout>
 
@@ -188,26 +59,37 @@
                         <GridLayout columns="auto, *, auto" rows="auto" width="100%" height="auto" class="owe-main-info"
                             verticalAlignment="top">
                             <Image row="0" col="0"
-                                src="https://img.icons8.com/bubbles/50/000000/sorting-arrows-horizontal.png"
+                                src="~/images/directions/direction-icon.png"
                                 class="owe-category-icon"></Image>
                             <StackLayout row="0" col="1" orientation="vertical" class="owe-info-container">
                                 <Label class="owe-title" text="DIRECTION"> </Label>
                                 <GridLayout columns="auto,auto,auto,auto" rows="auto" width="100%">
-                                    <Label text="Bonne Direction" class="lender-name" row="0" col="1">
+                                    <Label text="Bonne Direction" class="direction-name" row="0" col="1">
                                     </Label>
                                 </GridLayout>
                             </StackLayout>
                         </GridLayout>
 
-                        <GridLayout rows="auto" width="100%" height="auto" class="owe-secondary-info">
-                            <GridLayout columns="2*, *, *" rows="*, 2*" horizontalAlignment="center" height="80"
-                                width="370" class="lender-name">
-                                <Label text="Sentier de Payes et PR" row="0" col="0"></Label>
-                                <Label backgroundColor="green" row="1" col="0"></Label>
-                                <Label text="GRP" row="0" col="1"></Label>
-                                <Label row="1" col="1" backgroundColor="yellow"> </Label>
-                                <Label text="GR" row="0" col="2"> </Label>
-                                <Label backgroundColor="red" row="1" col="2"> </Label>
+                        <GridLayout rows="auto" width="100%" height="auto" class="direction-info">
+                            <GridLayout columns="auto,2*,2*" rows="auto" horizontalAlignment="center" height="auto"
+                                width="370" >
+
+                                <StackLayout rows="*, 2*" col="0" height="75" class="direction-group direction-border" verticalAlignment="center">
+                                    <Label text="Sentier de Pays PR" row="0" col="0" class="balisage-name"></Label>
+                                    <image src="~/images/directions/pr1.png" row="1" col="0" class="direction-img"></image>
+                                </StackLayout>
+
+
+                                <StackLayout rows="*, 2*" col="1" height="75" class="direction-group direction-border" verticalAlignment="center">
+                                    <Label text="GRP" row="0" col="0" class="balisage-name"></Label>
+                                    <image  src="~/images/directions/grp2.png" row="1" col="0"class="direction-img" > </image>
+                                </StackLayout>
+
+                                <StackLayout rows="*, 2*" col="2" height="75" class="direction-group" verticalAlignment="center">
+                                    <Label text="GR" row="0" col="0" class="balisage-name"> </Label>
+                                    <image src="~/images/directions/gr2.png" row="1" col="0" class="direction-img"></image>
+                                </StackLayout>
+
                             </GridLayout>
                         </GridLayout>
                         <Label class="divider" text=""></Label>
@@ -217,26 +99,37 @@
                         <GridLayout columns="auto, *, auto" rows="auto" width="100%" height="auto" class="owe-main-info"
                             verticalAlignment="top">
                             <Image row="0" col="0"
-                                src="https://img.icons8.com/bubbles/50/000000/sorting-arrows-horizontal.png"
+                                src="~/images/directions/direction-icon.png"
                                 class="owe-category-icon"></Image>
                             <StackLayout row="0" col="1" orientation="vertical" class="owe-info-container">
                                 <Label class="owe-title" text="DIRECTION"> </Label>
                                 <GridLayout columns="auto,auto,auto,auto" rows="auto" width="100%">
-                                    <Label text="Tourner à Gauche" class="lender-name" row="0" col="1">
+                                    <Label text="Tourner à Gauche" class="direction-name" row="0" col="1">
                                     </Label>
                                 </GridLayout>
                             </StackLayout>
                         </GridLayout>
 
-                        <GridLayout rows="auto" width="100%" height="auto" class="owe-secondary-info">
-                            <GridLayout columns="2*, *, *" rows="*, 2*" horizontalAlignment="center" height="80"
-                                width="370" class="lender-name">
-                                <Label text="Sentier de Payes et PR" row="0" col="0"></Label>
-                                <Label backgroundColor="green" row="1" col="0"></Label>
-                                <Label text="GRP" row="0" col="1"></Label>
-                                <Label row="1" col="1" backgroundColor="yellow"> </Label>
-                                <Label text="GR" row="0" col="2"> </Label>
-                                <Label backgroundColor="red" row="1" col="2"> </Label>
+                        <GridLayout rows="auto" width="100%" height="auto" class="direction-info">
+                            <GridLayout columns="auto,2*,2*" rows="auto" horizontalAlignment="center" height="auto"
+                                width="370" >
+
+                                <StackLayout rows="*, 2*" col="0" height="75" class="direction-group direction-border" verticalAlignment="center">
+                                    <Label text="Sentier de Pays PR" row="0" col="0" class="balisage-name"></Label>
+                                    <image src="~/images/directions/pr2.png" row="1" col="0" class="direction-img"></image>
+                                </StackLayout>
+
+
+                                <StackLayout rows="*, 2*" col="1" height="75" class="direction-group direction-border" verticalAlignment="center">
+                                    <Label text="GRP" row="0" col="0" class="balisage-name"></Label>
+                                    <image  src="~/images/directions/grp2.png" row="1" col="0"class="direction-img" > </image>
+                                </StackLayout>
+
+                                <StackLayout rows="*, 2*" col="2" height="75" class="direction-group" verticalAlignment="center">
+                                    <Label text="GR" row="0" col="0" class="balisage-name"> </Label>
+                                    <image src="~/images/directions/gr2.png" row="1" col="0" class="direction-img"></image>
+                                </StackLayout>
+
                             </GridLayout>
                         </GridLayout>
                         <Label class="divider" text=""></Label>
@@ -246,26 +139,37 @@
                         <GridLayout columns="auto, *, auto" rows="auto" width="100%" height="auto" class="owe-main-info"
                             verticalAlignment="top">
                             <Image row="0" col="0"
-                                src="https://img.icons8.com/bubbles/50/000000/sorting-arrows-horizontal.png"
+                                src="~/images/directions/direction-icon.png"
                                 class="owe-category-icon"></Image>
                             <StackLayout row="0" col="1" orientation="vertical" class="owe-info-container">
                                 <Label class="owe-title" text="DIRECTION"> </Label>
                                 <GridLayout columns="auto,auto,auto,auto" rows="auto" width="100%">
-                                    <Label text="Tourner à Droite" class="lender-name" row="0" col="1">
+                                    <Label text="Tourner à Droite" class="direction-name" row="0" col="1">
                                     </Label>
                                 </GridLayout>
                             </StackLayout>
                         </GridLayout>
 
-                        <GridLayout rows="auto" width="100%" height="auto" class="owe-secondary-info">
-                            <GridLayout columns="2*, *, *" rows="*, 2*" horizontalAlignment="center" height="80"
-                                width="370" class="lender-name">
-                                <Label text="Sentier de Payes et PR" row="0" col="0"></Label>
-                                <Label backgroundColor="green" row="1" col="0"></Label>
-                                <Label text="GRP" row="0" col="1"></Label>
-                                <Label row="1" col="1" backgroundColor="yellow"> </Label>
-                                <Label text="GR" row="0" col="2"> </Label>
-                                <Label backgroundColor="red" row="1" col="2"> </Label>
+                        <GridLayout rows="auto" width="100%" height="auto" class="direction-info">
+                            <GridLayout columns="auto,2*,2*" rows="auto" horizontalAlignment="center" height="auto"
+                                width="370" >
+
+                                <StackLayout rows="*, 2*" col="0" height="75" class="direction-group direction-border" verticalAlignment="center">
+                                    <Label text="Sentier de Pays PR" row="0" col="0" class="balisage-name"></Label>
+                                    <image src="~/images/directions/pr3.png" row="1" col="0" class="direction-img"></image>
+                                </StackLayout>
+
+
+                                <StackLayout rows="*, 2*" col="1" height="75" class="direction-group direction-border" verticalAlignment="center">
+                                    <Label text="GRP" row="0" col="0" class="balisage-name"></Label>
+                                    <image  src="~/images/directions/grp3.png" row="1" col="0"class="direction-img" > </image>
+                                </StackLayout>
+
+                                <StackLayout rows="*, 2*" col="2" height="75" class="direction-group" verticalAlignment="center">
+                                    <Label text="GR" row="0" col="0" class="balisage-name"> </Label>
+                                    <image src="~/images/directions/gr3.png" row="1" col="0" class="direction-img"></image>
+                                </StackLayout>
+
                             </GridLayout>
                         </GridLayout>
                         <Label class="divider" text=""></Label>
@@ -275,26 +179,37 @@
                         <GridLayout columns="auto, *, auto" rows="auto" width="100%" height="auto" class="owe-main-info"
                             verticalAlignment="top">
                             <Image row="0" col="0"
-                                src="https://img.icons8.com/bubbles/50/000000/sorting-arrows-horizontal.png"
+                                src="~/images/directions/direction-icon.png"
                                 class="owe-category-icon"></Image>
                             <StackLayout row="0" col="1" orientation="vertical" class="owe-info-container">
                                 <Label class="owe-title" text="DIRECTION"> </Label>
                                 <GridLayout columns="auto,auto,auto,auto" rows="auto" width="100%">
-                                    <Label text="Mauvaise Direction" class="lender-name" row="0" col="1">
+                                    <Label text="Mauvaise Direction" class="direction-name" row="0" col="1">
                                     </Label>
                                 </GridLayout>
                             </StackLayout>
                         </GridLayout>
 
-                        <GridLayout rows="auto" width="100%" height="auto" class="owe-secondary-info">
-                            <GridLayout columns="2*, *, *" rows="*, 2*" horizontalAlignment="center" height="80"
-                                width="370" class="lender-name">
-                                <Label text="Sentier de Payes et PR" row="0" col="0"></Label>
-                                <Label backgroundColor="green" row="1" col="0"></Label>
-                                <Label text="GRP" row="0" col="1"></Label>
-                                <Label row="1" col="1" backgroundColor="yellow"> </Label>
-                                <Label text="GR" row="0" col="2"> </Label>
-                                <Label backgroundColor="red" row="1" col="2"> </Label>
+                        <GridLayout rows="auto" width="100%" height="auto" class="direction-info">
+                            <GridLayout columns="auto,2*,2*" rows="auto" horizontalAlignment="center" height="auto"
+                                width="370" >
+
+                                <StackLayout rows="*, 2*" col="0" height="75" class="direction-group direction-border" verticalAlignment="center">
+                                    <Label text="Sentier de Pays PR" row="0" col="0" class="balisage-name"></Label>
+                                    <image src="~/images/directions/pr4.png" row="1" col="0" class="direction-img"></image>
+                                </StackLayout>
+
+
+                                <StackLayout rows="*, 2*" col="1" height="75" class="direction-group direction-border" verticalAlignment="center">
+                                    <Label text="GRP" row="0" col="0" class="balisage-name"></Label>
+                                    <image  src="~/images/directions/grp4.png" row="1" col="0"class="direction-img" > </image>
+                                </StackLayout>
+
+                                <StackLayout rows="*, 2*" col="2" height="75" class="direction-group" verticalAlignment="center">
+                                    <Label text="GR" row="0" col="0" class="balisage-name"> </Label>
+                                    <image src="~/images/directions/gr4.png" row="1" col="0" class="direction-img"></image>
+                                </StackLayout>
+
                             </GridLayout>
                         </GridLayout>
                         <Label class="divider" text=""></Label>
@@ -379,7 +294,7 @@
                             verticalAlignment="top" ></Label>
                             <StackLayout row="0" col="1" orientation="vertical" class="owe-info-container">
                                 <Label class="owe-title" text="Niveau 4"> </Label>
-                                <GridLayout columns="*" rows="auto, auto, auto" height="45" width="100%" >
+                                <GridLayout columns="*" rows="auto, auto, auto" height="auto" width="100%" >
                                      <Label
                                      textWrap="true"
                                      text="Très difficile, plus de 4h de marche. Pour randonneur expérimenté et sportif. L’itinéraire peut-être long et technique (dénivelé, passages délicats)."
@@ -387,7 +302,7 @@
                                      class="debtor-name"
                                      style="text-align: left;"
                                      ></Label>
->                                </GridLayout>
+                                </GridLayout>
                             </StackLayout>
                         </GridLayout>
                         <Label class="divider" text=""></Label>
@@ -414,7 +329,7 @@
                             class="owe-secondary-info">
                             <Label row="0" col="0" text="recommandations" class="time-information"></Label>
                             <GridLayout row="0" col="2" columns="auto, auto, auto" rows="auto">
-                                <Label row="0" col="0" text="...." class="lender-name"></Label>
+                                <Label row="0" col="0" text="...." class="direction-name"></Label>
                                 <Label row="0" col="1" text=" ...... "> </Label>
                                 <GridLayout row="0" col="2" columns="auto,auto" rows="auto" width="100%"
                                     class="debtor-list">
@@ -446,7 +361,7 @@
                             class="owe-secondary-info">
                             <Label row="0" col="0" text="recommandations" class="time-information"></Label>
                             <GridLayout row="0" col="2" columns="auto, auto, auto" rows="auto">
-                                <Label row="0" col="0" text="...." class="lender-name"></Label>
+                                <Label row="0" col="0" text="...." class="direction-name"></Label>
                                 <Label row="0" col="1" text=" ...... "> </Label>
                                 <GridLayout row="0" col="2" columns="auto,auto" rows="auto" width="100%"
                                     class="debtor-list">
