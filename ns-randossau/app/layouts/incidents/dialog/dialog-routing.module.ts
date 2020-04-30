@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes } from '@angular/router';
 import { NativeScriptRouterModule } from 'nativescript-angular/router';
-import { IncidentsComponent } from './incidents.component';
+import { DialogComponent } from './dialog.component';
 
 
 const routes: Routes = [
-  {path:"incidents", component:IncidentsComponent, outlet:"incidents"}
+    { path:"dialog", component:DialogComponent}
 ];
 
 @NgModule({
   imports: [NativeScriptRouterModule.forChild(routes)],
   exports: [NativeScriptRouterModule]
 })
-export class IncidentsRoutingModule { }
-
+export class DialogRoutingModule { }

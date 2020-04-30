@@ -1,0 +1,15 @@
+<GridLayout rows="*, *, *, *, *" backgroundColor="rgba(0, 0, 0, 0.8)" >
+
+    <StackLayout orientation="horizontal" row="0" padding="10">
+        <Switch [(ngModel)]="saveToGallery"></Switch>
+        <Label text="Ajouter à la galerie"></Label>
+    </StackLayout>
+
+    <Image row="1" [src]="cameraImage" stretch="fill" margin="10"></Image>
+
+    <Button backgroundColor="rgba(0, 0, 0, 0)" text="Prendre une Photo" class="btn btn-outline" (tap)="onTakePictureTap($event)" row="2"></Button>
+
+    <Button  row="3" class="btn btn-outline" text="Annuler" (tap)="close()"></Button>
+ <Button  row="4" class="btn btn-outline" text="Envoyer" (tap)="close()"></Button>
+
+</GridLayout>

@@ -1,4 +1,4 @@
-import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { NgModule, NgModuleFactoryLoader, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NativeScriptCommonModule } from 'nativescript-angular/common';
 import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angular";
 import { NativeScriptUIListViewModule } from "nativescript-ui-listview/angular";
@@ -8,6 +8,7 @@ import { NativeScriptUIDataFormModule } from "nativescript-ui-dataform/angular";
 import { NativeScriptUIAutoCompleteTextViewModule } from "nativescript-ui-autocomplete/angular";
 import { NativeScriptUIGaugeModule } from "nativescript-ui-gauge/angular";
 import { NativeScriptFormsModule } from 'nativescript-angular/forms';
+
 
 import { LayoutsRoutingModule } from './layouts-routing.module';
 import { LayoutsComponent } from './layouts.component';
@@ -25,6 +26,9 @@ import { DetailsComponent } from './parcours/details/details.component';
 
 
 
+import { DialogComponent } from './incidents/dialog/dialog.component';
+
+
 @NgModule({
   declarations: [
     LayoutsComponent,
@@ -36,10 +40,13 @@ import { DetailsComponent } from './parcours/details/details.component';
     SettingsComponent,
     SettingsRootComponent,
     DetailsComponent,
+    DialogComponent
+
   ],
 
   entryComponents: [
-    SettingsRootComponent
+    SettingsRootComponent,
+    DialogComponent
 ],
 
   imports: [
@@ -53,6 +60,8 @@ import { DetailsComponent } from './parcours/details/details.component';
     LayoutsRoutingModule,
     DetailsRoutingModule,
     NativeScriptFormsModule
+    NativeScriptFormsModule,
+
   ],
 
   schemas: [
