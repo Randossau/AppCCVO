@@ -1,4 +1,4 @@
-import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { NgModule, NgModuleFactoryLoader, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NativeScriptCommonModule } from 'nativescript-angular/common';
 import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angular";
 import { NativeScriptUIListViewModule } from "nativescript-ui-listview/angular";
@@ -8,6 +8,7 @@ import { NativeScriptUIDataFormModule } from "nativescript-ui-dataform/angular";
 import { NativeScriptUIAutoCompleteTextViewModule } from "nativescript-ui-autocomplete/angular";
 import { NativeScriptUIGaugeModule } from "nativescript-ui-gauge/angular";
 import { NativeScriptFormsModule } from 'nativescript-angular/forms';
+
 
 import { LayoutsRoutingModule } from './layouts-routing.module';
 import { LayoutsComponent } from './layouts.component';
@@ -21,6 +22,9 @@ import { SettingsRootComponent } from './settings/settings-root.component';
 import { AnimationsService } from './parcours/circuits/animations-service';
 import { LandmarksService } from './parcours/circuits/landmarks-service';
 
+import { DialogComponent } from './incidents/dialog/dialog.component';
+
+
 @NgModule({
   declarations: [
     LayoutsComponent,
@@ -30,11 +34,13 @@ import { LandmarksService } from './parcours/circuits/landmarks-service';
     AccueilComponent,
     RecommandationsComponent,
     SettingsComponent,
-    SettingsRootComponent
+    SettingsRootComponent,
+    DialogComponent
   ],
 
   entryComponents: [
-    SettingsRootComponent
+    SettingsRootComponent,
+    DialogComponent
 ],
 
   imports: [
@@ -46,7 +52,8 @@ import { LandmarksService } from './parcours/circuits/landmarks-service';
     NativeScriptUIAutoCompleteTextViewModule,
     NativeScriptUIGaugeModule,NativeScriptCommonModule,
     LayoutsRoutingModule,
-    NativeScriptFormsModule
+    NativeScriptFormsModule,
+
   ],
 
   schemas: [

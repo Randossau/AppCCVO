@@ -1,30 +1,41 @@
 <!-- FIX Transition on Android and Icon X instead of cog-->
 
-<ActionBar title= "Réglages" backgroundColor="#171831" color= "#d0d0d0">
+<ActionBar title="Paramètres" backgroundColor="#171831" color="#d0d0d0">
     <ActionItem icon="~/assets/img/icons8-settings-50.png" ios.position="right" (tap)="closeModal(scrollView)">
     </ActionItem>
 </ActionBar>
 
-<!-- <ScrollView #scrollView class="page">
-    <StackLayout class="home-panel">
-        <Button text="Général" class="btn btn-primary"></Button>
-        <Button text="Profil" class="btn btn-primary"></Button>
-        <Button text="Connexion" class="btn btn-primary"></Button>
 
-    </StackLayout>
-</ScrollView> -->
+<ScrollView #scrollView backgroundColor="#171831">
+    <StackLayout>
+        <StackLayout>
+            <AbsoluteLayout padding="10 0 0 0">
+                <Label height="80" width="100%" backgroundColor="#212247"></Label>
+                <Label height="70" width="70" borderRadius="35" backgroundColor="#171831" margin="5 5"></Label>
 
-<ScrollView #scrollView><ListView class="list-group" [items]="countries"
-    style="height:1250px">
-    <ng-template let-country="item">
-        <FlexboxLayout justifyContent="space-between" alignItems="center">
-            <FlexboxLayout flexDirection="row" class="list-group-item">
-                <Image [src]="country.imageSrc" class="thumb"></Image>
-                <Label [text]="country.name" class="list-group-item-heading"
-                    verticalAlignment="center"></Label>
-            </FlexboxLayout>
-            <Label [text]="country.open" [class]="country.type" paddingRight="18"></Label>
-        </FlexboxLayout>
-    </ng-template>
-</ListView>
+                <!-- TO FIX Padding on IOS-->
+                <Label height="70" width="70" class="fa-light" text="&#xf332;" color="#d0d0d0" fontSize="45" padding="11 0 0 17"></Label>
+
+                <StackLayout padding="20 0 0 90" >
+                    <Label text="Frederik Holtermann" color="#d0d0d0" fontSize="14" fontWeight="bold"></Label>
+                    <Label text="frederik.holtermann@gmail.com" color="#d0d0d0" fontSize="12"></Label>
+                </StackLayout>
+
+            </AbsoluteLayout>
+
+
+
+            <StackLayout *ngFor="let item of settings">
+                <Label  height="50" width="100%"
+                backgroundColor="#212247" marginTop="10" vertcalAlignment="center" horizontalAlignment="left" class="fa-light" [text]="item.icon+item.nom" color="#d0d0d0" padding="10"></Label>
+            </StackLayout>
+        </StackLayout>
+
+
+            <StackLayout *ngFor="let gen of general">
+                <Label  height="50" width="100%"
+                backgroundColor="#212247" marginTop="10" vertcalAlignment="center" horizontalAlignment="left" class="fa-light" [text]="gen.icon+gen.nom" color="#d0d0d0" padding="10"></Label>
+            </StackLayout>
+        </StackLayout>
+
 </ScrollView>

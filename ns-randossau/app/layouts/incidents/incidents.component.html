@@ -1,1 +1,35 @@
-<Button text="incidents works!" class="btn btn-primary"></Button>
+<GridLayout backgroundColor="#212247" rows="*, *, *, *" columns="*, *" ios:style="padding-top:80"
+    android:style="padding-top:35">
+    <FlexLayout color="#d0d0d0">
+        <StackLayout row="0" col="0" data-name="animaux">
+            <Button (tap)="showModal()" class="icon-incident -rounded-lg" height="100" width="100" text="A"></Button>
+            <Label text="Animaux/Insectes" class="text-center"></Label>
+        </StackLayout>
+        <StackLayout row="0" col="1" data-name="vegetation">
+            <Button (tap)="showModal()" class="icon-incident -rounded-lg" height="100" width="100" text="B"></Button>
+            <Label text="Végétation gênante" class="text-center"></Label>
+        </StackLayout>
+        <StackLayout row="1" col="0" data-name="arbres">
+            <Button (tap)="showModal()" class="icon-incident -rounded-lg" height="100" width="100" text="F"></Button>
+            <Label text="Chute d'arbres" class="text-center"></Label>
+
+        </StackLayout>
+        <StackLayout row="1" col="1" data-name="balisage">
+            <Button (tap)="showModal()" class="icon-incident -rounded-lg" height="100" width="100" text="E"></Button>
+            <Label text="Balisage/Fléchage" class="text-center"></Label>
+        </StackLayout>
+        <StackLayout row="2" col="0" data-name="sentier">
+            <Button (tap)="showModal()" class="icon-incident -rounded-lg" height="100" width="100" text="D"></Button>
+            <Label text="Sentier impraticable" class="text-center"></Label>
+        </StackLayout>
+        <StackLayout row="2" col="1" data-name="autres">
+            <Button (tap)="showModal()" class="icon-incident -rounded-lg" height="100" width="100" text="C"></Button>
+            <Label text="Autres" class="text-center"></Label>
+        </StackLayout>
+        <StackLayout marginTop="10" row="3" col="0" data-name="help">
+            <Label android:style="margin-left:45; margin-top:10" ios:style="margin-left:35" text="&#xf059;"
+                class="fa-light" fontSize="18" color="#171831"></Label>
+        </StackLayout>
+    </FlexLayout>
+
+</GridLayout>

@@ -31,7 +31,6 @@ export class LayoutsComponent implements OnInit, AfterViewInit {
     @ViewChild('rightTabs', { static: true }) rightTabs: ElementRef;
     @ViewChild('centerPatch', { static: true }) centerPatch: ElementRef;
     @ViewChild('tabBGContainer', { static: true }) tabBGContainer: ElementRef;
-
     @ViewChildren('tabContents', { read: ElementRef }) tabContents: QueryList<ElementRef>;
 
     // Pan Helper
@@ -42,15 +41,16 @@ export class LayoutsComponent implements OnInit, AfterViewInit {
     // Tab Contents and Properties
     tabContainer = {
         backgroundColor: '#171831',
-        focusColor: '#77b509'
+        // focusColor: '#77b509'
     };
 
-    tabList: { text: string, title: string, color?: string, backgroundColor: string, fadeColor?: string }[] = [
-        { text: String.fromCharCode(0xf05a), title:"Recommandations" ,backgroundColor: 'rgba(255, 255, 255, 0)', color: '#d0d0d0' },
-        { text: String.fromCharCode(0xf279), title:"Parcours" ,backgroundColor: 'rgba(255, 255, 255, 0)', color: '#d0d0d0' },
-        { text: String.fromCharCode(0xf015), title:"Accueil" ,backgroundColor: 'rgba(255, 255, 255, 0)', color: '#d0d0d0' },
-        { text: String.fromCharCode(0xf601), title:"GPS" ,backgroundColor: 'rgba(255, 255, 255, 0)', color: '#d0d0d0' },
-        { text: String.fromCharCode(0xf071), title:"Incidents" ,backgroundColor: 'rgba(255, 255, 255, 0)', color: '#d0d0d0' }
+    tabList: { text: string, title: string, color?: string, backgroundColor: string, focusColor?: string, fadeColor?: string }[] =
+    [
+        { text: String.fromCharCode(0xf05a), title:"Recommandations" ,backgroundColor: 'rgba(255, 255, 255, 0)', focusColor: '#77b509', color: '#d0d0d0' },
+        { text: String.fromCharCode(0xf279), title:"Parcours" ,backgroundColor: 'rgba(255, 255, 255, 0)', focusColor: '#77b509', color: '#d0d0d0' },
+        { text: String.fromCharCode(0xf015), title:"Accueil" ,backgroundColor: 'rgba(255, 255, 255, 0)', focusColor: '#77b509', color: '#d0d0d0' },
+        { text: String.fromCharCode(0xf601), title:"GPS" ,backgroundColor: 'rgba(255, 255, 255, 0)', focusColor: '#77b509', color: '#d0d0d0' },
+        { text: String.fromCharCode(0xf071), title:"Incidents" ,backgroundColor: 'rgba(255, 255, 255, 0)', focusColor:'#77b509', color: '#d0d0d0', fadeColor:'#171831' }
     ];
 
 

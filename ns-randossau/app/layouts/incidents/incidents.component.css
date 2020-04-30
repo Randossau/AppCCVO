@@ -1,1 +1,28 @@
-/* Add mobile styles for the component here.  */
+@font-face {
+    font-family: 'incident';
+    src: url('../../fonts/incident.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* .icon-incident {
+    font-family: 'incident';
+    font-size: 70;
+    color:#77b509;
+} */
+
+/* [class*='icon-']:before{
+	display: inline-block;
+   font-family: 'incident';
+   font-style: normal;
+   font-weight: normal;
+   line-height: 1;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale
+} */
+/* .icon-animal:before{content:'\0041';}
+.icon-forest:before{content:'\0042';}
+.icon-other:before{content:'\0043';}
+.icon-road:before{content:'\0044';}
+.icon-sign:before{content:'\0045';}
+.icon-tree:before{content:'\0046';} */
