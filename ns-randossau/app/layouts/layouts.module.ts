@@ -21,7 +21,9 @@ import { SettingsComponent } from './settings/settings.component';
 import { SettingsRootComponent } from './settings/settings-root.component';
 import { AnimationsService } from './parcours/circuits/animations-service';
 import { LandmarksService } from './parcours/circuits/landmarks-service';
+
 import { DialogComponent } from './incidents/dialog/dialog.component';
+
 
 @NgModule({
   declarations: [

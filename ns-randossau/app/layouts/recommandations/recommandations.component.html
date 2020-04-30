@@ -11,16 +11,16 @@
 
     <AbsoluteLayout tkMainContent width="100%" height="100%" backgroundColor="#e8e7e7">
         <StackLayout top="0" left="0" width="100%" height="100%">
-            <GridLayout columns="auto, auto , auto" row="auto" width="100%" height="auto" class="profile-container"
+            <GridLayout columns="*,3*" row="auto" width="auto" height="auto" class="logo-container"
                 verticalAlignment="middle">
-                <StackLayout row="0" col="1" orientation="vertical" width="80"
-                 height="80" class="profile-photo-container">
-                    <Image src="~/assets/img/img/logo.png" class="profile__photo"></Image>
+                <StackLayout row="0" col="0" orientation="vertical" horizontalAlignment="left" class="ccvo-photo-container">
+                    <Image src="~/assets/img/logo.png"></Image>
                  </StackLayout>
-                <StackLayout row="0" col="2" height="80" orientation="vertical" horizontalAlignment="center"
+                <StackLayout row="0" col="1" orientation="vertical" horizontalAlignment="center"
                     class="title-container">
                     <Label text="Les Recommandations" class="page-title"></Label>
-                    <Label text="de la CCVO" class="page-title"></Label>
+                    <Label text=" de la Fédération Française" class="page-title"></Label>
+                    <Label text="de Randonnée Pédestre" class="page-title"></Label>
                 </StackLayout>
             </GridLayout>
 

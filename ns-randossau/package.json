@@ -21,6 +21,7 @@
     "@angular/platform-browser": "~8.2.0",
     "@angular/platform-browser-dynamic": "~8.2.0",
     "@angular/router": "~8.2.0",
+    "@nativescript/core": "^6.5.1",
     "@nativescript/theme": "~2.2.1",
     "geolib": "^3.2.1",
     "nativescript-angular": "~8.20.0",
