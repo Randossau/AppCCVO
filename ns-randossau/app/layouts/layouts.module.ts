@@ -20,7 +20,11 @@ import { RecommandationsComponent } from './recommandations/recommandations.comp
 import { SettingsComponent } from './settings/settings.component';
 import { SettingsRootComponent } from './settings/settings-root.component';
 import { AnimationsService } from './parcours/circuits/animations-service';
-import { LandmarksService } from './parcours/circuits/landmarks-service';
+import { ParcoursServService } from './parcours/circuits/parcoursServ-service';
+import { DetailsRoutingModule } from './parcours/details/details-routing.module';
+import { DetailsComponent } from './parcours/details/details.component';
+
+
 
 import { DialogComponent } from './incidents/dialog/dialog.component';
 
@@ -35,7 +39,9 @@ import { DialogComponent } from './incidents/dialog/dialog.component';
     RecommandationsComponent,
     SettingsComponent,
     SettingsRootComponent,
+    DetailsComponent,
     DialogComponent
+
   ],
 
   entryComponents: [
@@ -52,6 +58,8 @@ import { DialogComponent } from './incidents/dialog/dialog.component';
     NativeScriptUIAutoCompleteTextViewModule,
     NativeScriptUIGaugeModule,NativeScriptCommonModule,
     LayoutsRoutingModule,
+    DetailsRoutingModule,
+    NativeScriptFormsModule
     NativeScriptFormsModule,
 
   ],
@@ -61,7 +69,7 @@ import { DialogComponent } from './incidents/dialog/dialog.component';
   ],
   providers: [
       AnimationsService,
-      LandmarksService
+      ParcoursServService
   ]
 
 })

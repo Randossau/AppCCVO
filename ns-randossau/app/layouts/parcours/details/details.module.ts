@@ -11,7 +11,7 @@ import { NativeScriptFormsModule } from "nativescript-angular/forms";
 
 import { DetailsRoutingModule } from "./details-routing.module";
 import { DetailsComponent } from "./details.component";
-import { ActionButtonModule } from "../action-button/action-button.module";
+
 
 @NgModule({
 	imports: [
@@ -25,7 +25,6 @@ import { ActionButtonModule } from "../action-button/action-button.module";
 		NativeScriptCommonModule,
 		DetailsRoutingModule,
 		NativeScriptFormsModule,
-		ActionButtonModule
 	],
 	declarations: [
 		DetailsComponent

@@ -1,7 +1,7 @@
-import { Landmark } from './landmark';
+import { ParcoursI } from './parcoursI.model';
 import { defer } from 'rxjs';
 
-export const LANDMARKS: Landmark[] = [
+export const PARCOURS: ParcoursI[] = [
     {
         id: 0,
         name: "La Bastide - (Circ. Patrimoine)",
